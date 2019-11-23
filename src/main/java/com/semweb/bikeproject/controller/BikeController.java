@@ -19,7 +19,7 @@ public class BikeController {
 	@RequestMapping("/index")
 	public String bike(Model model) {
 		
-		List<Station> stations = fusekiService.getStationsByCity("rennes");
+		List<Station> stations = fusekiService.getStationsByCity("stetienne");
 		
 		model.addAttribute("top", "BIKE SYSTEM");
 		model.addAttribute("stations", stations);

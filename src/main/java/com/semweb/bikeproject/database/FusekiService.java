@@ -56,11 +56,10 @@ public class FusekiService {
         			binding.get("?name").toString(),
         			binding.get("?cap").toString(),
         			binding.get("?available_bikes").toString(),
-        			binding.get("?lat").toString(),
-        			binding.get("?lon").toString());
-        	
+        			binding.get("?lat").toString().substring(0, 8),
+        			binding.get("?lon").toString().substring(0, 8));
+        	      	
         	cityStations.add(stat);
-       
         }
         
         qe.close();
