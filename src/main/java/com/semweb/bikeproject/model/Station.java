@@ -13,8 +13,8 @@ public class Station {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Station(String name, String capacity, String available_bikes, String longitude,
-			String latitude) {
+	public Station(String name, String capacity, String available_bikes,
+			String latitude, String longitude) {
 		super();
 		this.name = name;
 		this.capacity = capacity;

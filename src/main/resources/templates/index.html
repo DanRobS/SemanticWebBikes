@@ -8,32 +8,78 @@
 	<div id="googleMap" style="width:100%;height:700px;">
 	</div>
 	<form>
-		<input type="button" value="Click me" onclick="msg()">
+		<input type="button" value="Display stations" onclick="msg()">
 	</form>
 	
-	<div id="check">
-		<ul th:each="stations : ${stations}">
-			<li th:text="${stations.latitude}"></li>
-	    	<li th:text="${stations.longitude}"></li>
-	    </ul>
-	</div>
+	<input type="button" value="Saint-Etienne" onclick="stetienne()">
+	<input type="button" value="Lyon" onclick="lyon()">
+	<input type="button" value="Paris" onclick="paris()">
+	<input type="button" value="Strasbourg" onclick="strasbourg()">
+	<input type="button" value="Montpellier" onclick="montpellier()">
+	<input type="button" value="Rennes" onclick="rennes()">
 	
-	<script>
+	<script th:inline="javascript">
 		
 		var mapProp;
 		var map;
-		function myMap() {
-		mapProp= {
-			center:new google.maps.LatLng(45.436238,4.388181),
-			zoom:14,
-		};
 		
-		map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+		function myMap() {
+			mapProp= {
+				center:new google.maps.LatLng(45.436238,4.388181),
+				zoom:14,
+			};
+			
+			map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+			
+		}
+		
+		function stetienne(){
+			map.setCenter({lat: 45.441118, lng: 4.386193});
+			map.setZoom(12);
+		}
+		
+		function lyon(){
+			map.setCenter({lat: 45.754427, lng: 4.836244});
+			map.setZoom(12);
+		}
+		
+		function paris(){
+			map.setCenter({lat: 48.859950, lng: 2.339508});
+			map.setZoom(12);
+		}
+		
+		function strasbourg(){
+			map.setCenter({lat: 48.577028, lng: 7.753177});
+			map.setZoom(12);
+		}
+		
+		function montpellier(){
+			map.setCenter({lat: 43.609016, lng: 3.877938});
+			map.setZoom(12);
+		}
+		
+		function rennes(){
+			map.setCenter({lat: 48.113036, lng: -1.676784});
+			map.setZoom(12);
 		}
 		
 		function msg() {
-			map.setCenter({lat: -34, lng: 151});
-			map.setZoom(12);
+			//map.setCenter({lat: -34, lng: 151});
+			//map.setZoom(12);
+			var bicycles = [[${stations}]];
+			//console.log(bicycles);
+			for (i = 0; i < bicycles.length; i++) {
+				
+
+				
+				var marker = new google.maps.Marker({
+				    position: new google.maps.LatLng(bicycles[i].latitude, bicycles[i].longitude),
+				    title: "Station : "+bicycles[i].name+", capacité : "+bicycles[i].capacity+", vélos dispos : "+bicycles[i].available_bikes
+				});
+				
+				marker.setMap(map);
+		    }
+			
 		}
 	</script>
 	

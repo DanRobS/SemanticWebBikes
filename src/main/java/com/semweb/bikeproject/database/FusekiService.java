@@ -15,7 +15,7 @@ import com.semweb.bikeproject.model.Station;
 public class FusekiService {
 
 	
-	public List<Station> getStationsByCity(String cityName){
+	public List<Station> getStationsByCity(){
 		
 		List<Station> cityStations = new ArrayList<>();
 		
@@ -33,14 +33,13 @@ public class FusekiService {
                 "PREFIX capacity: <http://www.w3.org/2000/01/rdf-schema#capacity>\n" + 
                 "PREFIX num_available_bikes: <http://www.w3.org/2000/01/rdf-schema#nb_velos_dispos>\n"+
                 "PREFIX station_lyon: <http://www.w3.org/2000/01/rdf-schema#stations_lyon>\n" + 
-                "PREFIX station_stetienne: <http://www.w3.org/2000/01/rdf-schema#stations_lyon>\n" + 
+                "PREFIX station_stetienne: <http://www.w3.org/2000/01/rdf-schema#stations_st_etienne>\n" + 
                 "PREFIX station_paris: <http://www.w3.org/2000/01/rdf-schema#stations_paris>\n" + 
                 "PREFIX station_strasbourg: <http://www.w3.org/2000/01/rdf-schema#stations_strasbourg>\n" + 
                 "PREFIX station_montpellier: <http://www.w3.org/2000/01/rdf-schema#stations_montpellier>\n" + 
                 "PREFIX station_rennes: <http://www.w3.org/2000/01/rdf-schema#stations_rennes>\n"+
                 "SELECT ?name ?cap ?available_bikes ?lat ?lon\n" + 
-                "WHERE {\n" + 	                
-                "?subject location: station_"+cityName+": .\n" + 
+                "WHERE {\n" + 	                 
                 "?subject name: ?name .\n" + 
                 "?subject capacity: ?cap .\n" + 
                 "?subject num_available_bikes: ?available_bikes .\n" + 
