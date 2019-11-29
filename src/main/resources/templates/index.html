@@ -7,9 +7,6 @@
 	
 	<div id="googleMap" style="width:100%;height:700px;">
 	</div>
-	<form>
-		<input type="button" value="Display stations" onclick="msg()">
-	</form>
 	
 	<input type="button" value="Saint-Etienne" onclick="stetienne()">
 	<input type="button" value="Lyon" onclick="lyon()">
@@ -31,6 +28,20 @@
 			
 			map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
 			
+			//Stations display - BEG
+			var bicycles = [[${stations}]];
+
+			for (i = 0; i < bicycles.length; i++) {
+				
+				var marker = new google.maps.Marker({
+				    position: new google.maps.LatLng(bicycles[i].latitude, bicycles[i].longitude),
+				    title: "Station : "+bicycles[i].name+
+				    		"\nCapacity : "+bicycles[i].capacity+
+				    		"\nAvailable bikes : "+bicycles[i].available_bikes
+				});
+				marker.setMap(map);
+		    }
+			//Stations display - END
 		}
 		
 		function stetienne(){
@@ -63,24 +74,6 @@
 			map.setZoom(12);
 		}
 		
-		function msg() {
-			//map.setCenter({lat: -34, lng: 151});
-			//map.setZoom(12);
-			var bicycles = [[${stations}]];
-			//console.log(bicycles);
-			for (i = 0; i < bicycles.length; i++) {
-				
-
-				
-				var marker = new google.maps.Marker({
-				    position: new google.maps.LatLng(bicycles[i].latitude, bicycles[i].longitude),
-				    title: "Station : "+bicycles[i].name+", capacité : "+bicycles[i].capacity+", vélos dispos : "+bicycles[i].available_bikes
-				});
-				
-				marker.setMap(map);
-		    }
-			
-		}
 	</script>
 	
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_XYaw05uILoBPpkEslhw7p3Rt1WccWPg&callback=myMap&region=FR"></script>

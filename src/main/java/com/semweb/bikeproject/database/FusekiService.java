@@ -24,6 +24,7 @@ public class FusekiService {
         QueryExecution qe = QueryExecutionFactory.sparqlService(
                 "http://localhost:3030/bike_dataset/sparql",
                 
+                //STATION DETAILS
                 "PREFIX location: <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>\n" + 
                 "PREFIX station: <http://www.w3.org/2000/01/rdf-schema#Stations>\n" + 
                 "PREFIX station_id: <http://www.w3.org/2000/01/rdf-schema#station_id>\n" + 
@@ -31,13 +32,17 @@ public class FusekiService {
                 "PREFIX lat: <http://www.opengis.net/ont/geosparql#lat>\n" + 
                 "PREFIX lon: <http://www.opengis.net/ont/geosparql#lon>\n" + 
                 "PREFIX capacity: <http://www.w3.org/2000/01/rdf-schema#capacity>\n" + 
-                "PREFIX num_available_bikes: <http://www.w3.org/2000/01/rdf-schema#nb_velos_dispos>\n"+
+                "PREFIX num_available_bikes: <http://www.w3.org/2000/01/rdf-schema#nb_velos_dispos>\n" +
+                
+                //STATION LOCATIONS
                 "PREFIX station_lyon: <http://www.w3.org/2000/01/rdf-schema#stations_lyon>\n" + 
                 "PREFIX station_stetienne: <http://www.w3.org/2000/01/rdf-schema#stations_st_etienne>\n" + 
                 "PREFIX station_paris: <http://www.w3.org/2000/01/rdf-schema#stations_paris>\n" + 
                 "PREFIX station_strasbourg: <http://www.w3.org/2000/01/rdf-schema#stations_strasbourg>\n" + 
                 "PREFIX station_montpellier: <http://www.w3.org/2000/01/rdf-schema#stations_montpellier>\n" + 
-                "PREFIX station_rennes: <http://www.w3.org/2000/01/rdf-schema#stations_rennes>\n"+
+                "PREFIX station_rennes: <http://www.w3.org/2000/01/rdf-schema#stations_rennes>\n" +
+                
+                //SPARQL QUERY
                 "SELECT ?name ?cap ?available_bikes ?lat ?lon\n" + 
                 "WHERE {\n" + 	                 
                 "?subject name: ?name .\n" + 
@@ -55,12 +60,11 @@ public class FusekiService {
         			binding.get("?name").toString(),
         			binding.get("?cap").toString(),
         			binding.get("?available_bikes").toString(),
-        			binding.get("?lat").toString().substring(0, 8),
-        			binding.get("?lon").toString().substring(0, 8));
+        			binding.get("?lat").toString().substring(0, 6),
+        			binding.get("?lon").toString().substring(0, 6));
         	      	
         	cityStations.add(stat);
         }
-        
         qe.close();
 		
 		return cityStations;
