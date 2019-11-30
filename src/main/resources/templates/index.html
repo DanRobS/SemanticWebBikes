@@ -1,11 +1,25 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <meta charset="UTF-8">
-<body>
+<body prefix="location: <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> 
+			station: <http://www.w3.org/2000/01/rdf-schema#Stations> 
+			station_id: <http://www.w3.org/2000/01/rdf-schema#station_id> 
+			name: <http://www.w3.org/2000/01/rdf-schema#name> 
+			lat: <http://www.opengis.net/ont/geosparql#lat> 
+			lon: <http://www.opengis.net/ont/geosparql#lon> 
+			capacity: <http://www.w3.org/2000/01/rdf-schema#capacity> 
+			num_available_bikes: <http://www.w3.org/2000/01/rdf-schema#nb_velos_dispos> 
+			station_lyon: <http://www.w3.org/2000/01/rdf-schema#stations_lyon> 
+			station_stetienne: <http://www.w3.org/2000/01/rdf-schema#stations_st_etienne> 
+			station_paris: <http://www.w3.org/2000/01/rdf-schema#stations_paris> 
+			station_strasbourg: <http://www.w3.org/2000/01/rdf-schema#stations_strasbourg> 
+			station_montpellier: <http://www.w3.org/2000/01/rdf-schema#stations_montpellier> 
+			station_rennes: <http://www.w3.org/2000/01/rdf-schema#stations_rennes> ">
 	
 	<h1 th:text="${top}"></h1>
 	
 	<div id="googleMap" style="width:100%;height:700px;">
+	
 	</div>
 	
 	<input type="button" value="Saint-Etienne" onclick="stetienne()">
@@ -75,8 +89,22 @@
 		}
 		
 	</script>
-	
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_XYaw05uILoBPpkEslhw7p3Rt1WccWPg&callback=myMap&region=FR"></script>
+
+
+	<table>
+	  <tr>
+	    <th>Station name</th>
+	    <th>Capacity</th>
+	    <th>Available bikes</th>
+	  </tr>
+	  <tr>
+	    <th>Station name</th>
+	    <th>Capacity</th>
+	    <th>Available bikes</th>
+	  </tr>
+	</table>
+
 
 </body>
 </html> 
