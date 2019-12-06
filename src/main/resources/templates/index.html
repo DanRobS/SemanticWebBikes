@@ -14,7 +14,8 @@
 			station_paris: <http://www.w3.org/2000/01/rdf-schema#stations_paris> 
 			station_strasbourg: <http://www.w3.org/2000/01/rdf-schema#stations_strasbourg> 
 			station_montpellier: <http://www.w3.org/2000/01/rdf-schema#stations_montpellier> 
-			station_rennes: <http://www.w3.org/2000/01/rdf-schema#stations_rennes> ">
+			station_rennes: <http://www.w3.org/2000/01/rdf-schema#stations_rennes> "
+		about="http://www.w3.org/2000/01/rdf-schema#stations_st_etienne">
 	
 	<h1 th:text="${top}"></h1>
 	
@@ -29,8 +30,7 @@
 	<input type="button" value="Montpellier" onclick="montpellier()">
 	<input type="button" value="Rennes" onclick="rennes()">
 	
-	<script th:inline="javascript">
-		
+	<script th:inline="javascript">	
 		var mapProp;
 		var map;
 		
@@ -43,7 +43,15 @@
 			map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
 			
 			//Stations display - BEG
-			var bicycles = [[${stations}]];
+				//marker.setMap(map);
+			//Stations display - END
+		}
+		
+		function stetienne(){
+			map.setCenter({lat: 45.441118, lng: 4.386193});
+			map.setZoom(12);
+			
+			var bicycles = [[${stations_stetienne}]];
 
 			for (i = 0; i < bicycles.length; i++) {
 				
@@ -55,12 +63,7 @@
 				});
 				marker.setMap(map);
 		    }
-			//Stations display - END
-		}
-		
-		function stetienne(){
-			map.setCenter({lat: 45.441118, lng: 4.386193});
-			map.setZoom(12);
+			
 		}
 		
 		function lyon(){
@@ -87,24 +90,29 @@
 			map.setCenter({lat: 48.113036, lng: -1.676784});
 			map.setZoom(12);
 		}
-		
 	</script>
+	
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_XYaw05uILoBPpkEslhw7p3Rt1WccWPg&callback=myMap&region=FR"></script>
 
-
+	<!-- 
+	<div about="http://www.w3.org/2000/01/rdf-schema#stations_st_etienne" typeof="rdf-schema:station_stetienne" th:each="stations_stetienne : ${stations_stetienne}">
+		<p property="name:stat_name" th:if="${stations_stetienne.location == 'stetienne'}" th:text=${stations_stetienne.name}></p>
+	</div>
+	 -->
 	<table>
 	  <tr>
 	    <th>Station name</th>
-	    <th>Capacity</th>
+	    <th>| City name</th>
+	    <th>| Capacity |</th>
 	    <th>Available bikes</th>
 	  </tr>
-	  <tr>
-	    <th>Station name</th>
-	    <th>Capacity</th>
-	    <th>Available bikes</th>
+	  <tr typeof="rdf-schema:station_stetienne"	th:each="stations_stetienne : ${stations_stetienne}">
+	  	<td property="name:station_name" th:if="${stations_stetienne.location == 'stetienne'}" th:text=${stations_stetienne.name}></td>
+	    <td property="location:city_name" th:if="${stations_stetienne.location == 'stetienne'}" th:text=${stations_stetienne.location}></td>
+	    <td property="capacity:capacity" th:if="${stations_stetienne.location == 'stetienne'}" th:text=${stations_stetienne.capacity}></td>
+	    <td property="num_available_bikes:nb_bikes" th:if="${stations_stetienne.location == 'stetienne'}" th:text=${stations_stetienne.available_bikes}></td>
 	  </tr>
 	</table>
-
 
 </body>
 </html> 

@@ -2,20 +2,22 @@ package com.semweb.bikeproject.model;
 
 public class Station {
 
-	//private String location;
+	private String location;
 	private String name;
 	private String capacity;
 	private String available_bikes;
 	private String longitude;
 	private String latitude;
 	
+	
 	public Station() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Station(String name, String capacity, String available_bikes,
+	public Station(String location, String name, String capacity, String available_bikes,
 			String latitude, String longitude) {
 		super();
+		this.location = location;
 		this.name = name;
 		this.capacity = capacity;
 		this.available_bikes = available_bikes;
@@ -61,6 +63,14 @@ public class Station {
 
 	public void setLatitude(String latitude) {
 		this.latitude = latitude;
+	}
+	
+	public String getLocation() {
+		return location;
+	}
+
+	public void setLocation(String location) {
+		this.location = location;
 	}
 
 	@Override

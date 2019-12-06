@@ -20,9 +20,9 @@ public class BikeController {
 	public String bike(Model model) {
 		model.addAttribute("top", "BIKE SYSTEM");
 		
-		List<Station> stations = fusekiService.getStationsByCity();
+		List<Station> stations_stetienne = fusekiService.getStationsByCity("stetienne");
 		
-		model.addAttribute("stations", stations);
+		model.addAttribute("stations_stetienne", stations_stetienne);
 		 
 		return "index";
 	}

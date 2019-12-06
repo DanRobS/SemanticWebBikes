@@ -15,7 +15,7 @@ import com.semweb.bikeproject.model.Station;
 public class FusekiService {
 
 	
-	public List<Station> getStationsByCity(){
+	public List<Station> getStationsByCity(String cityName){
 		
 		List<Station> cityStations = new ArrayList<>();
 		
@@ -44,7 +44,8 @@ public class FusekiService {
                 
                 //SPARQL QUERY
                 "SELECT ?name ?cap ?available_bikes ?lat ?lon\n" + 
-                "WHERE {\n" + 	                 
+                "WHERE {\n" + 	  
+                "?subject location: station_"+cityName+": ." +
                 "?subject name: ?name .\n" + 
                 "?subject capacity: ?cap .\n" + 
                 "?subject num_available_bikes: ?available_bikes .\n" + 
@@ -57,6 +58,7 @@ public class FusekiService {
         	QuerySolution binding = results.nextSolution();    
         	
         	Station stat = new Station(
+        			cityName,
         			binding.get("?name").toString(),
         			binding.get("?cap").toString(),
         			binding.get("?available_bikes").toString(),
