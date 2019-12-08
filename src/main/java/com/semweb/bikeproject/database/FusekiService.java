@@ -14,7 +14,6 @@ import com.semweb.bikeproject.model.Station;
 @Component
 public class FusekiService {
 
-	
 	public List<Station> getStationsByCity(String cityName){
 		
 		List<Station> cityStations = new ArrayList<>();
