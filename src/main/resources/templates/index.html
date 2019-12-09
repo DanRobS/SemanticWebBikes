@@ -21,9 +21,7 @@
 	
 	<h1 th:text="${top}"></h1>
 	
-	<div id="googleMap" style="width:100%;height:700px;">
-	
-	</div>
+	<div id="googleMap" style="width:100%;height:700px;"></div>
 	
 	<input type="text" id="cityName">
 	<input type="button" value="Display bikes" onclick="displayBikes()"><br>
@@ -40,16 +38,13 @@
 			};
 			
 			map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-			
-			//Stations display - BEG
-				//marker.setMap(map);
-			//Stations display - END
 		}
 		
 		
 		
 		function displayBikes(){
 			var nb_bikes;
+			//S T - E T I E N N E
 			if(document.getElementById("cityName").value=="stetienne" |
 					document.getElementById("cityName").value=="StEtienne" ){
 				map.setCenter({lat: 45.441118, lng: 4.386193});
@@ -57,20 +52,72 @@
 				var bicycles = [[${stations_stetienne}]];
 				
 			}
+			
+			//L Y O N
 			else if(document.getElementById("cityName").value=="lyon" |
 					document.getElementById("cityName").value=="Lyon" ){
 				map.setCenter({lat: 45.754427, lng: 4.836244});
 				map.setZoom(12);
 				var bicycles = [[${stations_lyon}]];
 				
+				var xmlhttp = new XMLHttpRequest();
+			    xmlhttp.onreadystatechange = function() {
+			      if (this.readyState == 4 && this.status == 200) {
+			        nb_bikes = JSON.parse(this.responseText);
+			        var lyon_tab = document.getElementById("lyon_tab");
+					for(i=0; i<=bicycles.length; i++){
+			        	var x = lyon_tab.rows[i+1].insertCell(2);
+						x.innerHTML = nb_bikes.values[i].available_bikes;
+			        }
+			      }
+			  }
+			    xmlhttp.open("GET", "https://download.data.grandlyon.com/ws/rdata/jcd_jcdecaux.jcdvelov/all.json?maxfeatures=401&start=1", true);
+			    xmlhttp.send(); 
+			    
+				for (i = 0; i < bicycles.length; i++) {
+					var marker = new google.maps.Marker({
+					    position: new google.maps.LatLng(bicycles[i].latitude, bicycles[i].longitude),
+					    title: "Station : "+bicycles[i].name+
+					    		"\nCapacity : "+bicycles[i].capacity
+					});
+					marker.setMap(map);
+			    }
+				
 			}
+			
+			//P A R I S
 			else if(document.getElementById("cityName").value=="paris" |
 					document.getElementById("cityName").value=="Paris" ){
 				map.setCenter({lat: 48.859950, lng: 2.339508});
 				map.setZoom(12);
 				var bicycles = [[${stations_paris}]];
 				
+				var xmlhttp = new XMLHttpRequest();
+			    xmlhttp.onreadystatechange = function() {
+			      if (this.readyState == 4 && this.status == 200) {
+			        nb_bikes = JSON.parse(this.responseText);
+			        var paris_tab = document.getElementById("paris_tab");			        
+					for(i=0; i<=bicycles.length; i++){
+			        	var x = paris_tab.rows[i+1].insertCell(2);
+						x.innerHTML = nb_bikes.records[i].fields.nbbike;
+			        }
+			      }
+			  }
+			    xmlhttp.open("GET", "https://opendata.paris.fr/api/records/1.0/search/?dataset=velib-disponibilite-en-temps-reel&facet=overflowactivation&facet=creditcard&facet=kioskstate&facet=station_state", true);
+			    xmlhttp.send(); 
+			    
+				for (i = 0; i < bicycles.length; i++) {
+					var marker = new google.maps.Marker({
+					    position: new google.maps.LatLng(bicycles[i].latitude, bicycles[i].longitude),
+					    title: "Station : "+bicycles[i].name+
+					    		"\nCapacity : "+bicycles[i].capacity
+					});
+					marker.setMap(map);
+			    }
+				
 			}
+			
+			//R E N N E S
 			else if(document.getElementById("cityName").value=="rennes" |
 					document.getElementById("cityName").value=="Rennes" ){
 				map.setCenter({lat: 48.113036, lng: -1.676784});
@@ -82,36 +129,27 @@
 			    xmlhttp.onreadystatechange = function() {
 			      if (this.readyState == 4 && this.status == 200) {
 			        nb_bikes = JSON.parse(this.responseText);
-			        var rennes_tab = document.getElementById("rennes_tab");
-			        bicycles.available_bikes=nb_bikes.records;
-			        
+			        var rennes_tab = document.getElementById("rennes_tab");			        
 					for(i=0; i<=bicycles.length; i++){
-			        	
 			        	var x = rennes_tab.rows[i+1].insertCell(2);
 						x.innerHTML = nb_bikes.records[i].fields.nombrevelosdisponibles;
-			        	
 			        }
 			      }
-			    	//console.log(document.getElementById("rennes_tab").rows.length);
 			  }
 			    xmlhttp.open("GET", "https://data.rennesmetropole.fr/api/records/1.0/search/?dataset=etat-des-stations-le-velo-star-en-temps-reel", true);
 			    xmlhttp.send(); 
 			    
-				   
 				for (i = 0; i < bicycles.length; i++) {
-					//console.log("tpp : "+nb_bikes.records);
 					var marker = new google.maps.Marker({
 					    position: new google.maps.LatLng(bicycles[i].latitude, bicycles[i].longitude),
 					    title: "Station : "+bicycles[i].name+
 					    		"\nCapacity : "+bicycles[i].capacity
-					    		//"\nAvailable bikes : "+nb_bikes[i]
 					});
 					marker.setMap(map);
 			    }
-				
-				
 			}
 			
+			// S T R A S B O U R G
 			else if(document.getElementById("cityName").value=="strasbourg" |
 					document.getElementById("cityName").value=="Strasbourg" ){
 				map.setCenter({lat: 48.577028, lng: 7.753177});
@@ -119,6 +157,8 @@
 				var bicycles = [[${stations_strasbourg}]];
 				
 			}
+			
+			//M O N T P E L L I E R
 			else if(document.getElementById("cityName").value=="montpellier" |
 					document.getElementById("cityName").value=="Montpellier" ){
 				map.setCenter({lat: 43.609016, lng: 3.877938});
@@ -136,10 +176,9 @@
 	
 	<button id="ste_tab" class="accordion">Saint-Etienne</button>
 	<div class="panel">
-		<table about="http://www.w3.org/2000/01/rdf-schema#stations_st_etienne">
+		<table id="ste_tab" about="http://www.w3.org/2000/01/rdf-schema#stations_st_etienne">
 	  <tr>
 	    <th>Station name</th>
-	    <th>| City name</th>
 	    <th>| Capacity |</th>
 	    <th>Available bikes</th>
 	  </tr>
@@ -169,19 +208,36 @@
 	
 	<button class="accordion">Lyon</button>
 	<div class="panel">
-		<table about="http://www.w3.org/2000/01/rdf-schema#stations_lyon">
+		<table id="lyon_tab" about="http://www.w3.org/2000/01/rdf-schema#stations_lyon">
 	  <tr>
 	    <th>Station name</th>
-	    <th>| City name</th>
 	    <th>| Capacity |</th>
 	    <th>Available bikes</th>
 	  </tr>
 	  <tr typeof="rdf-schema:station_lyon"	th:each="stations_lyon : ${stations_lyon}">
 	  	<td property="name:station_name" th:if="${stations_lyon.location == 'lyon'}" th:text=${stations_lyon.name}></td>
 	    <td property="capacity:capacity" th:if="${stations_lyon.location == 'lyon'}" th:text=${stations_lyon.capacity}></td>
+	    
 	  </tr>
 	</table>
 	</div>
+	
+	<button class="accordion">Paris</button>
+	<div class="panel">
+		<table id="paris_tab" about="http://www.w3.org/2000/01/rdf-schema#stations_lyon">
+	  <tr>
+	    <th>Station name</th>
+	    <th>| Capacity |</th>
+	    <th>Available bikes</th>
+	  </tr>
+	  <tr typeof="rdf-schema:station_paris"	th:each="stations_paris : ${stations_paris}">
+	  	<td property="name:station_name" th:if="${stations_paris.location == 'paris'}" th:text=${stations_paris.name}></td>
+	    <td property="capacity:capacity" th:if="${stations_paris.location == 'paris'}" th:text=${stations_paris.capacity}></td>
+	    
+	  </tr>
+	</table>
+	</div>
+	
 	
 	<script src="/js/dynamic.js"></script>
 	
