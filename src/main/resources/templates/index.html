@@ -3,6 +3,7 @@
 <meta charset="UTF-8">
 
 <link rel="stylesheet" href="/css/design.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
 
 <body prefix="location: <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> 
 			station: <http://www.w3.org/2000/01/rdf-schema#Stations> 
@@ -176,10 +177,10 @@
 	
 	<button id="ste_tab" class="accordion">Saint-Etienne</button>
 	<div class="panel">
-		<table id="ste_tab" about="http://www.w3.org/2000/01/rdf-schema#stations_st_etienne">
+		<table id="ste_tab" about="http://www.w3.org/2000/01/rdf-schema#stations_st_etienne" class="w3-table-all w3-card-4">
 	  <tr>
 	    <th>Station name</th>
-	    <th>| Capacity |</th>
+	    <th>Capacity</th>
 	    <th>Available bikes</th>
 	  </tr>
 	  <tr typeof="rdf-schema:station_stetienne"	th:each="stations_stetienne : ${stations_stetienne}">
@@ -192,10 +193,10 @@
 	
 	<button class="accordion">Rennes</button>
 	<div class="panel">
-		<table id="rennes_tab" about="http://www.w3.org/2000/01/rdf-schema#stations_rennes">
+		<table id="rennes_tab" about="http://www.w3.org/2000/01/rdf-schema#stations_rennes" class="w3-table-all w3-card-4">
 	  <tr>
 	    <th>Station name</th>
-	    <th>| Capacity |</th>
+	    <th>Capacity</th>
 	    <th>Available bikes</th>
 	  </tr>
 	  <tr id="rennes_row" typeof="rdf-schema:station_rennes" th:each="stations_rennes : ${stations_rennes}">
@@ -208,10 +209,10 @@
 	
 	<button class="accordion">Lyon</button>
 	<div class="panel">
-		<table id="lyon_tab" about="http://www.w3.org/2000/01/rdf-schema#stations_lyon">
+		<table id="lyon_tab" about="http://www.w3.org/2000/01/rdf-schema#stations_lyon" class="w3-table-all w3-card-4">
 	  <tr>
 	    <th>Station name</th>
-	    <th>| Capacity |</th>
+	    <th>Capacity</th>
 	    <th>Available bikes</th>
 	  </tr>
 	  <tr typeof="rdf-schema:station_lyon"	th:each="stations_lyon : ${stations_lyon}">
@@ -224,10 +225,10 @@
 	
 	<button class="accordion">Paris</button>
 	<div class="panel">
-		<table id="paris_tab" about="http://www.w3.org/2000/01/rdf-schema#stations_lyon">
+		<table id="paris_tab" about="http://www.w3.org/2000/01/rdf-schema#stations_lyon" class="w3-table-all w3-card-4">
 	  <tr>
 	    <th>Station name</th>
-	    <th>| Capacity |</th>
+	    <th>Capacity</th>
 	    <th>Available bikes</th>
 	  </tr>
 	  <tr typeof="rdf-schema:station_paris"	th:each="stations_paris : ${stations_paris}">
