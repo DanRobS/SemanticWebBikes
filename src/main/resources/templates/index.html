@@ -204,7 +204,7 @@
 	  <tr typeof="rdf-schema:station_stetienne"	th:each="stations_stetienne : ${stations_stetienne}">
 	  	<td property="name:station_name" th:if="${stations_stetienne.location == 'stetienne'}" th:text=${stations_stetienne.name}></td>
 	    <td property="capacity:capacity" th:if="${stations_stetienne.location == 'stetienne'}" th:text=${stations_stetienne.capacity}></td>
-	    <td property="capacity:available_bikes" th:if="${stations_stetienne.location == 'stetienne'}" th:text=${stations_stetienne.available_bikes}></td>
+	    <td property="nb_bikes:available_bikes" th:if="${stations_stetienne.location == 'stetienne'}" th:text=${stations_stetienne.available_bikes}></td>
 	  </tr>
 	</table>
 	</div>
@@ -219,7 +219,7 @@
 	  </tr>
 	  <tr id="rennes_row" typeof="rdf-schema:station_rennes" th:each="stations_rennes : ${stations_rennes}">
 	  	<td property="name:station_name" th:if="${stations_rennes.location == 'rennes'}" th:text=${stations_rennes.name}></td>
-	    <td property="capacity:capacity" th:if="${stations_rennes.location == 'rennes'}" th:text=${stations_rennes.capacity}></td>
+	    <td property="nb_bikes:capacity" th:if="${stations_rennes.location == 'rennes'}" th:text=${stations_rennes.capacity}></td>
 	    
 	  </tr>
 	</table>
@@ -235,7 +235,7 @@
 	  </tr>
 	  <tr typeof="rdf-schema:station_lyon"	th:each="stations_lyon : ${stations_lyon}">
 	  	<td property="name:station_name" th:if="${stations_lyon.location == 'lyon'}" th:text=${stations_lyon.name}></td>
-	    <td property="capacity:capacity" th:if="${stations_lyon.location == 'lyon'}" th:text=${stations_lyon.capacity}></td>
+	    <td property="nb_bikes:capacity" th:if="${stations_lyon.location == 'lyon'}" th:text=${stations_lyon.capacity}></td>
 	    
 	  </tr>
 	</table>
@@ -251,7 +251,7 @@
 	  </tr>
 	  <tr typeof="rdf-schema:station_paris"	th:each="stations_paris : ${stations_paris}">
 	  	<td property="name:station_name" th:if="${stations_paris.location == 'paris'}" th:text=${stations_paris.name}></td>
-	    <td property="capacity:capacity" th:if="${stations_paris.location == 'paris'}" th:text=${stations_paris.capacity}></td>
+	    <td property="nb_bikes:capacity" th:if="${stations_paris.location == 'paris'}" th:text=${stations_paris.capacity}></td>
 	    
 	  </tr>
 	</table>
@@ -268,7 +268,7 @@
 	  <tr typeof="rdf-schema:station_montpellier"	th:each="stations_montpellier : ${stations_montpellier}">
 	  	<td property="name:station_name" th:if="${stations_montpellier.location == 'montpellier'}" th:text=${stations_montpellier.name}></td>
 	    <td property="capacity:capacity" th:if="${stations_montpellier.location == 'montpellier'}" th:text=${stations_montpellier.capacity}></td>
-	    <td property="capacity:available_bikes" th:if="${stations_montpellier.location == 'montpellier'}" th:text=${stations_montpellier.available_bikes}></td>
+	    <td property="nb_bikes:available_bikes" th:if="${stations_montpellier.location == 'montpellier'}" th:text=${stations_montpellier.available_bikes}></td>
 	  </tr>
 	</table>
 	</div>
@@ -284,7 +284,7 @@
 	  <tr typeof="rdf-schema:station_strasbourg"	th:each="stations_strasbourg : ${stations_strasbourg}">
 	  	<td property="name:station_name" th:if="${stations_strasbourg.location == 'strasbourg'}" th:text=${stations_strasbourg.name}></td>
 	    <td property="capacity:capacity" th:if="${stations_strasbourg.location == 'strasbourg'}" th:text=${stations_strasbourg.capacity}></td>
-	    <td property="capacity:available_bikes" th:if="${stations_strasbourg.location == 'strasbourg'}" th:text=${stations_strasbourg.available_bikes}></td>
+	    <td property="nb_bikes:available_bikes" th:if="${stations_strasbourg.location == 'strasbourg'}" th:text=${stations_strasbourg.available_bikes}></td>
 	  </tr>
 	</table>
 	</div>
