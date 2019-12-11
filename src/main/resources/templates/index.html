@@ -52,6 +52,14 @@
 				map.setZoom(12);
 				var bicycles = [[${stations_stetienne}]];
 				
+				for (i = 0; i < bicycles.length; i++) {
+					var marker = new google.maps.Marker({
+					    position: new google.maps.LatLng(bicycles[i].latitude, bicycles[i].longitude),
+					    title: "Station : "+bicycles[i].name+
+					    		"\nCapacity : "+bicycles[i].capacity
+					});
+					marker.setMap(map);
+			    }
 			}
 			
 			//L Y O N
@@ -71,7 +79,7 @@
 						x.innerHTML = nb_bikes.values[i].available_bikes;
 			        }
 			      }
-			  }
+			  	}
 			    xmlhttp.open("GET", "https://download.data.grandlyon.com/ws/rdata/jcd_jcdecaux.jcdvelov/all.json?maxfeatures=401&start=1", true);
 			    xmlhttp.send(); 
 			    
@@ -83,7 +91,6 @@
 					});
 					marker.setMap(map);
 			    }
-				
 			}
 			
 			//P A R I S
@@ -103,7 +110,7 @@
 						x.innerHTML = nb_bikes.records[i].fields.nbbike;
 			        }
 			      }
-			  }
+			  	}
 			    xmlhttp.open("GET", "https://opendata.paris.fr/api/records/1.0/search/?dataset=velib-disponibilite-en-temps-reel&facet=overflowactivation&facet=creditcard&facet=kioskstate&facet=station_state", true);
 			    xmlhttp.send(); 
 			    
@@ -115,7 +122,6 @@
 					});
 					marker.setMap(map);
 			    }
-				
 			}
 			
 			//R E N N E S
@@ -136,7 +142,7 @@
 						x.innerHTML = nb_bikes.records[i].fields.nombrevelosdisponibles;
 			        }
 			      }
-			  }
+			  	}
 			    xmlhttp.open("GET", "https://data.rennesmetropole.fr/api/records/1.0/search/?dataset=etat-des-stations-le-velo-star-en-temps-reel", true);
 			    xmlhttp.send(); 
 			    
@@ -157,6 +163,14 @@
 				map.setZoom(12);
 				var bicycles = [[${stations_strasbourg}]];
 				
+				for (i = 0; i < bicycles.length; i++) {
+					var marker = new google.maps.Marker({
+					    position: new google.maps.LatLng(bicycles[i].latitude, bicycles[i].longitude),
+					    title: "Station : "+bicycles[i].name+
+					    		"\nCapacity : "+bicycles[i].capacity
+					});
+					marker.setMap(map);
+			    }
 			}
 			
 			//M O N T P E L L I E R
@@ -164,16 +178,20 @@
 					document.getElementById("cityName").value=="Montpellier" ){
 				map.setCenter({lat: 43.609016, lng: 3.877938});
 				map.setZoom(12);
-				var bicycles = [[${stations_montpellier}]];
+				var bicycles = [[${stations_montpellier}]];	
 				
+				for (i = 0; i < bicycles.length; i++) {
+					var marker = new google.maps.Marker({
+					    position: new google.maps.LatLng(bicycles[i].latitude, bicycles[i].longitude),
+					    title: "Station : "+bicycles[i].name+
+					    		"\nCapacity : "+bicycles[i].capacity
+					});
+					marker.setMap(map);
+			    }
 			}
-	
 		}
-		
 	</script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_XYaw05uILoBPpkEslhw7p3Rt1WccWPg&callback=myMap&region=FR"></script>
-	
-	
 	
 	<button id="ste_tab" class="accordion">Saint-Etienne</button>
 	<div class="panel">
@@ -186,7 +204,7 @@
 	  <tr typeof="rdf-schema:station_stetienne"	th:each="stations_stetienne : ${stations_stetienne}">
 	  	<td property="name:station_name" th:if="${stations_stetienne.location == 'stetienne'}" th:text=${stations_stetienne.name}></td>
 	    <td property="capacity:capacity" th:if="${stations_stetienne.location == 'stetienne'}" th:text=${stations_stetienne.capacity}></td>
-	    
+	    <td property="capacity:available_bikes" th:if="${stations_stetienne.location == 'stetienne'}" th:text=${stations_stetienne.available_bikes}></td>
 	  </tr>
 	</table>
 	</div>
@@ -239,10 +257,38 @@
 	</table>
 	</div>
 	
+	<button id="ste_tab" class="accordion">Montpellier</button>
+	<div class="panel">
+		<table id="ste_tab" about="http://www.w3.org/2000/01/rdf-schema#stations_st_etienne" class="w3-table-all w3-card-4">
+	  <tr>
+	    <th>Station name</th>
+	    <th>Capacity</th>
+	    <th>Available bikes</th>
+	  </tr>
+	  <tr typeof="rdf-schema:station_montpellier"	th:each="stations_montpellier : ${stations_montpellier}">
+	  	<td property="name:station_name" th:if="${stations_montpellier.location == 'montpellier'}" th:text=${stations_montpellier.name}></td>
+	    <td property="capacity:capacity" th:if="${stations_montpellier.location == 'montpellier'}" th:text=${stations_montpellier.capacity}></td>
+	    <td property="capacity:available_bikes" th:if="${stations_montpellier.location == 'montpellier'}" th:text=${stations_montpellier.available_bikes}></td>
+	  </tr>
+	</table>
+	</div>
+	
+	<button id="ste_tab" class="accordion">Strasbourg</button>
+	<div class="panel">
+		<table id="ste_tab" about="http://www.w3.org/2000/01/rdf-schema#stations_st_etienne" class="w3-table-all w3-card-4">
+	  <tr>
+	    <th>Station name</th>
+	    <th>Capacity</th>
+	    <th>Available bikes</th>
+	  </tr>
+	  <tr typeof="rdf-schema:station_strasbourg"	th:each="stations_strasbourg : ${stations_strasbourg}">
+	  	<td property="name:station_name" th:if="${stations_strasbourg.location == 'strasbourg'}" th:text=${stations_strasbourg.name}></td>
+	    <td property="capacity:capacity" th:if="${stations_strasbourg.location == 'strasbourg'}" th:text=${stations_strasbourg.capacity}></td>
+	    <td property="capacity:available_bikes" th:if="${stations_strasbourg.location == 'strasbourg'}" th:text=${stations_strasbourg.available_bikes}></td>
+	  </tr>
+	</table>
+	</div>
 	
 	<script src="/js/dynamic.js"></script>
-	
-	
-
 </body>
 </html> 
