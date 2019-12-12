@@ -12,7 +12,7 @@ function getWeather(){
 			var div = document.getElementById("weather_window");
 			var temp = Math.round(weather.main.temp - 273.15);
 			var x = document.createElement("h5");
-			var xtext = document.createTextNode("St-Etienne: "+weather.weather[0].main+" - "+weather.weather[0].description+" - "+temp+"°C");
+			var xtext = document.createTextNode("St-Etienne: "+weather.weather[0].main+" - "+weather.weather[0].description+"\n"+temp+"°C");
 			x.appendChild(xtext);
 			div.appendChild(x);
 		}
@@ -32,7 +32,7 @@ function getWeather(){
 			var div = document.getElementById("weather_window");
 			var temp = Math.round(weather.main.temp - 273.15);
 			var x = document.createElement("h5");
-			var xtext = document.createTextNode("Lyon: "+weather.weather[0].main+" - "+weather.weather[0].description+" - "+temp+"°C");
+			var xtext = document.createTextNode("Lyon: "+weather.weather[0].main+" - "+weather.weather[0].description+"\n"+temp+"°C");
 			x.appendChild(xtext);
 			div.appendChild(x);
 		}
@@ -52,7 +52,7 @@ function getWeather(){
 				var div = document.getElementById("weather_window");
 				var temp = Math.round(weather.main.temp - 273.15);
 				var x = document.createElement("h5");
-				var xtext = document.createTextNode("Paris: "+weather.weather[0].main+" - "+weather.weather[0].description+" - "+temp+"°C");
+				var xtext = document.createTextNode("Paris: "+weather.weather[0].main+" - "+weather.weather[0].description+"\n"+temp+"°C");
 				x.appendChild(xtext);
 				div.appendChild(x);
 				}
@@ -73,7 +73,7 @@ function getWeather(){
 				var div = document.getElementById("weather_window");
 				var temp = Math.round(weather.main.temp - 273.15);
 				var x = document.createElement("h5");
-				var xtext = document.createTextNode("Rennes: "+weather.weather[0].main+" - "+weather.weather[0].description+" - "+temp+"°C");
+				var xtext = document.createTextNode("Rennes: "+weather.weather[0].main+" - "+weather.weather[0].description+"\n"+temp+"°C");
 				x.appendChild(xtext);
 				div.appendChild(x);
 			}
@@ -93,7 +93,7 @@ function getWeather(){
 				var div = document.getElementById("weather_window");
 				var temp = Math.round(weather.main.temp - 273.15);     
 				var x = document.createElement("h5");
-				var xtext = document.createTextNode("Strasbourg: "+weather.weather[0].main+" - "+weather.weather[0].description+" - "+temp+"°C");
+				var xtext = document.createTextNode("Strasbourg: "+weather.weather[0].main+" - "+weather.weather[0].description+"\n"+temp+"°C");
 				x.appendChild(xtext);
 				div.appendChild(x);
 			}
@@ -113,7 +113,7 @@ function getWeather(){
 			var div = document.getElementById("weather_window");
 			var temp = Math.round(weather.main.temp - 273.15);     
 			var x = document.createElement("h5");
-			var xtext = document.createTextNode("Montpellier: "+weather.weather[0].main+" - "+weather.weather[0].description+" - "+temp+"°C");
+			var xtext = document.createTextNode("Montpellier: "+weather.weather[0].main+" - "+weather.weather[0].description+"\n"+temp+"°C");
 			x.appendChild(xtext);
 			div.appendChild(x);
 		}
