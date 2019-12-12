@@ -4,7 +4,8 @@
 
 <link rel="stylesheet" href="/css/design.css">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ 
 <body prefix="location: <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> 
 			station: <http://www.w3.org/2000/01/rdf-schema#Stations> 
 			station_id: <http://www.w3.org/2000/01/rdf-schema#station_id> 
@@ -22,10 +23,23 @@
 	
 	<h1 th:text="${top}"></h1>
 	
+	<div id="weather_window" class="w3-container w3-teal" style="width:25%">
+	<h3>City weather</h3>
+	
+	</div>
+	
+	<script type="text/javascript" src="/js/weather.js"></script>
+	<script type="text/javascript">
+	function refreshWeather(){ 
+	    //$("#weather_window").load("#weather_window > *");
+	}
+	</script>
 	<div id="googleMap" style="width:100%;height:700px;"></div>
 	
 	<input type="text" id="cityName">
-	<input type="button" value="Display bikes" onclick="displayBikes()"><br>
+	<input type="button" value="Display bikes" onclick="displayBikes()">
+	<input type="button" value="Refresh weather" onclick="refreshWeather()">
+	<br>
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script th:inline="javascript">	
@@ -46,10 +60,13 @@
 		function displayBikes(){
 			var nb_bikes;
 			//S T - E T I E N N E
-			if(document.getElementById("cityName").value=="stetienne" |
-					document.getElementById("cityName").value=="StEtienne" ){
+			if(document.getElementById("cityName").value.trim()=="stetienne" |
+					document.getElementById("cityName").value.trim()=="StEtienne" |
+					document.getElementById("cityName").value.trim()=="saint-etienne" |
+					document.getElementById("cityName").value.trim()=="Saint-Etienne"){
 				map.setCenter({lat: 45.441118, lng: 4.386193});
 				map.setZoom(12);
+				getWeather();
 				var bicycles = [[${stations_stetienne}]];
 				
 				for (i = 0; i < bicycles.length; i++) {
@@ -63,10 +80,11 @@
 			}
 			
 			//L Y O N
-			else if(document.getElementById("cityName").value=="lyon" |
-					document.getElementById("cityName").value=="Lyon" ){
+			else if(document.getElementById("cityName").value.trim()=="lyon" |
+					document.getElementById("cityName").value.trim()=="Lyon" ){
 				map.setCenter({lat: 45.754427, lng: 4.836244});
 				map.setZoom(12);
+				getWeather();
 				var bicycles = [[${stations_lyon}]];
 				
 				var xmlhttp = new XMLHttpRequest();
@@ -94,10 +112,11 @@
 			}
 			
 			//P A R I S
-			else if(document.getElementById("cityName").value=="paris" |
-					document.getElementById("cityName").value=="Paris" ){
+			else if(document.getElementById("cityName").value.trim()=="paris" |
+					document.getElementById("cityName").value.trim()=="Paris" ){
 				map.setCenter({lat: 48.859950, lng: 2.339508});
 				map.setZoom(12);
+				getWeather();
 				var bicycles = [[${stations_paris}]];
 				
 				var xmlhttp = new XMLHttpRequest();
@@ -125,10 +144,11 @@
 			}
 			
 			//R E N N E S
-			else if(document.getElementById("cityName").value=="rennes" |
-					document.getElementById("cityName").value=="Rennes" ){
+			else if(document.getElementById("cityName").value.trim()=="rennes" |
+					document.getElementById("cityName").value.trim()=="Rennes" ){
 				map.setCenter({lat: 48.113036, lng: -1.676784});
 				map.setZoom(12);
+				getWeather();
 				var bicycles = [[${stations_rennes}]];
 				nb_bikes = new Array(bicycles.length);
 			    
@@ -157,10 +177,11 @@
 			}
 			
 			// S T R A S B O U R G
-			else if(document.getElementById("cityName").value=="strasbourg" |
-					document.getElementById("cityName").value=="Strasbourg" ){
+			else if(document.getElementById("cityName").value.trim()=="strasbourg" |
+					document.getElementById("cityName").value.trim()=="Strasbourg" ){
 				map.setCenter({lat: 48.577028, lng: 7.753177});
 				map.setZoom(12);
+				getWeather();
 				var bicycles = [[${stations_strasbourg}]];
 				
 				for (i = 0; i < bicycles.length; i++) {
@@ -174,10 +195,11 @@
 			}
 			
 			//M O N T P E L L I E R
-			else if(document.getElementById("cityName").value=="montpellier" |
-					document.getElementById("cityName").value=="Montpellier" ){
+			else if(document.getElementById("cityName").value.trim()=="montpellier" |
+					document.getElementById("cityName").value.trim()=="Montpellier" ){
 				map.setCenter({lat: 43.609016, lng: 3.877938});
 				map.setZoom(12);
+				getWeather();
 				var bicycles = [[${stations_montpellier}]];	
 				
 				for (i = 0; i < bicycles.length; i++) {
