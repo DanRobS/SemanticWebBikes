@@ -120,7 +120,5 @@ function getWeather(){
 		}
 			    xmlhttp.open("GET", "http://api.openweathermap.org/data/2.5/weather?q=montpellier,fr&appid=4d6ddf350eeabacd18d0fb7cd12f1a53", true);
 			    xmlhttp.send();
-	}
-	
+	}	
 }
-
