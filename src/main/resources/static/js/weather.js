@@ -21,8 +21,6 @@ function getWeather(){
 			    xmlhttp.send();
 	}
 	
-	
-	
 	//L Y O N
 	else if(document.getElementById("cityName").value.trim()=="lyon" | 
 		document.getElementById("cityName").value.trim()=="Lyon"){
@@ -63,7 +61,6 @@ function getWeather(){
 				    xmlhttp.open("GET", "http://api.openweathermap.org/data/2.5/weather?q=paris,fr&appid=4d6ddf350eeabacd18d0fb7cd12f1a53", true);
 				    xmlhttp.send();
 		}
-	
 	
 	//R E N N E S
 	else if(document.getElementById("cityName").value.trim()=="rennes" | 
