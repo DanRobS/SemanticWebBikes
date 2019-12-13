@@ -1,12 +1,8 @@
-Instructions for the semantic web project :
-
-the project is publicly available on (we made it public after the presentation) : https://github.com/DanRobS/SemanticWebBikes
-
-Instructions :
+# Instructions :
 --------------------------
 - Apache jena fuseki :
 
- 	create a database named "bike_dataset_2' and import the RDF files 
+ 	create a database named "bike_dataset_2' and upload the RDF files 
 
 - Spring Tool Suite 4 (to download, or install Spring Boot plugin for Eclipse) : 
 	
