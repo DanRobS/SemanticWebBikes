@@ -19,19 +19,18 @@
 </head>
  
 <body prefix="location: <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> 
-			station: <http://www.w3.org/2000/01/rdf-schema#Stations> 
-			station_id: <http://www.w3.org/2000/01/rdf-schema#station_id> 
-			name: <http://www.w3.org/2000/01/rdf-schema#name> 
+			station_id: <http://example.org/station_id> 
+			name: <http://example.org/name> 
 			lat: <http://www.opengis.net/ont/geosparql#lat> 
 			lon: <http://www.opengis.net/ont/geosparql#lon> 
-			capacity: <http://www.w3.org/2000/01/rdf-schema#capacity> 
-			num_available_bikes: <http://www.w3.org/2000/01/rdf-schema#nb_velos_dispos> 
-			station_lyon: <http://www.w3.org/2000/01/rdf-schema#stations_lyon> 
-			station_stetienne: <http://www.w3.org/2000/01/rdf-schema#stations_st_etienne> 
-			station_paris: <http://www.w3.org/2000/01/rdf-schema#stations_paris> 
-			station_strasbourg: <http://www.w3.org/2000/01/rdf-schema#stations_strasbourg> 
-			station_montpellier: <http://www.w3.org/2000/01/rdf-schema#stations_montpellier> 
-			station_rennes: <http://www.w3.org/2000/01/rdf-schema#stations_rennes>">
+			capacity: <http://example.org/capacity> 
+			num_available_bikes: <http://example.org/nb_velos_dispos> 
+			station_lyon: <http://example.org/stations_lyon> 
+			station_stetienne: <http://example.org/stations_st_etienne> 
+			station_paris: <http://example.org/stations_paris> 
+			station_strasbourg: <http://example.org/stations_strasbourg> 
+			station_montpellier: <http://example.org/stations_montpellier> 
+			station_rennes: <http://example.org/stations_rennes>">
 	
 	<section id="container">
 	
@@ -41,13 +40,10 @@
 	
 	<aside>
       <div id="sidebar" class="nav-collapse ">
-        <!-- sidebar menu start-->
         <hr>
         <hr>
         <div id="weather_window" style="width:25%">
-        
 		</div>
-        <!-- sidebar menu end-->
       </div>
     </aside>
 	
@@ -251,14 +247,14 @@
 			
 			<button id="ste_tab" class="accordion">Saint-Etienne</button>
 			<div class="panel">
-				<table id="ste_tab" about="http://www.w3.org/2000/01/rdf-schema#stations_st_etienne" 
+				<table id="ste_tab" about="http://example.org/stations_st_etienne" 
 				class="w3-table-all w3-card-4 display table table-bordered w3-table-all w3-card-4">
 			  <tr>
 			    <th>Station name</th>
 			    <th>Capacity</th>
 			    <th>Available bikes</th>
 			  </tr>
-			  <tr typeof="rdf-schema:station_stetienne"	th:each="stations_stetienne : ${stations_stetienne}">
+			  <tr typeof="ex:station_stetienne"	th:each="stations_stetienne : ${stations_stetienne}">
 			  	<td property="name:station_name" th:if="${stations_stetienne.location == 'stetienne'}" th:text=${stations_stetienne.name}></td>
 			    <td property="capacity:capacity" th:if="${stations_stetienne.location == 'stetienne'}" th:text=${stations_stetienne.capacity}></td>
 			    <td property="nb_bikes:available_bikes" th:if="${stations_stetienne.location == 'stetienne'}" th:text=${stations_stetienne.available_bikes}></td>
@@ -268,16 +264,16 @@
 			
 			<button class="accordion">Rennes</button>
 			<div class="panel">
-				<table id="rennes_tab" about="http://www.w3.org/2000/01/rdf-schema#stations_rennes" 
+				<table id="rennes_tab" about="http://example.org/stations_rennes" 
 				class="w3-table-all w3-card-4 display table table-bordered w3-table-all w3-card-4">
 			  <tr>
 			    <th>Station name</th>
 			    <th>Capacity</th>
 			    <th>Available bikes</th>
 			  </tr>
-			  <tr id="rennes_row" typeof="rdf-schema:station_rennes" th:each="stations_rennes : ${stations_rennes}">
+			  <tr id="rennes_row" typeof="ex:station_rennes" th:each="stations_rennes : ${stations_rennes}">
 			  	<td property="name:station_name" th:if="${stations_rennes.location == 'rennes'}" th:text=${stations_rennes.name}></td>
-			    <td property="nb_bikes:capacity" th:if="${stations_rennes.location == 'rennes'}" th:text=${stations_rennes.capacity}></td>
+			    <td property="capacity:capacity" th:if="${stations_rennes.location == 'rennes'}" th:text=${stations_rennes.capacity}></td>
 			    
 			  </tr>
 			</table>
@@ -285,16 +281,16 @@
 			
 			<button class="accordion">Lyon</button>
 			<div class="panel">
-				<table id="lyon_tab" about="http://www.w3.org/2000/01/rdf-schema#stations_lyon" 
+				<table id="lyon_tab" about="http://example.org/stations_lyon" 
 				class="w3-table-all w3-card-4 display table table-bordered w3-table-all w3-card-4">
 			  <tr>
 			    <th>Station name</th>
 			    <th>Capacity</th>
 			    <th>Available bikes</th>
 			  </tr>
-			  <tr typeof="rdf-schema:station_lyon"	th:each="stations_lyon : ${stations_lyon}">
+			  <tr typeof="ex:station_lyon"	th:each="stations_lyon : ${stations_lyon}">
 			  	<td property="name:station_name" th:if="${stations_lyon.location == 'lyon'}" th:text=${stations_lyon.name}></td>
-			    <td property="nb_bikes:capacity" th:if="${stations_lyon.location == 'lyon'}" th:text=${stations_lyon.capacity}></td>
+			    <td property="capacity:capacity" th:if="${stations_lyon.location == 'lyon'}" th:text=${stations_lyon.capacity}></td>
 			    
 			  </tr>
 			</table>
@@ -302,14 +298,14 @@
 			
 			<button class="accordion">Paris</button>
 			<div class="panel">
-				<table id="paris_tab" about="http://www.w3.org/2000/01/rdf-schema#stations_lyon" 
+				<table id="paris_tab" about="http://example.org/stations_paris" 
 				class="w3-table-all w3-card-4 display table table-bordered w3-table-all w3-card-4">
 			  <tr>
 			    <th>Station name</th>
 			    <th>Capacity</th>
 			    <th>Available bikes</th>
 			  </tr>
-			  <tr typeof="rdf-schema:station_paris"	th:each="stations_paris : ${stations_paris}">
+			  <tr typeof="ex:station_paris"	th:each="stations_paris : ${stations_paris}">
 			  	<td property="name:station_name" th:if="${stations_paris.location == 'paris'}" th:text=${stations_paris.name}></td>
 			    <td property="nb_bikes:capacity" th:if="${stations_paris.location == 'paris'}" th:text=${stations_paris.capacity}></td>
 			    
@@ -319,14 +315,14 @@
 			
 			<button id="ste_tab" class="accordion">Montpellier</button>
 			<div class="panel">
-				<table id="ste_tab" about="http://www.w3.org/2000/01/rdf-schema#stations_st_etienne" 
+				<table id="ste_tab" about="http://example.org/stations_montpellier" 
 				class="w3-table-all w3-card-4 display table table-bordered w3-table-all w3-card-4">
 			  <tr>
 			    <th>Station name</th>
 			    <th>Capacity</th>
 			    <th>Available bikes</th>
 			  </tr>
-			  <tr typeof="rdf-schema:station_montpellier"	th:each="stations_montpellier : ${stations_montpellier}">
+			  <tr typeof="ex:station_montpellier"	th:each="stations_montpellier : ${stations_montpellier}">
 			  	<td property="name:station_name" th:if="${stations_montpellier.location == 'montpellier'}" th:text=${stations_montpellier.name}></td>
 			    <td property="capacity:capacity" th:if="${stations_montpellier.location == 'montpellier'}" th:text=${stations_montpellier.capacity}></td>
 			    <td property="nb_bikes:available_bikes" th:if="${stations_montpellier.location == 'montpellier'}" th:text=${stations_montpellier.available_bikes}></td>
@@ -336,14 +332,14 @@
 			
 			<button id="ste_tab" class="accordion">Strasbourg</button>
 			<div class="panel">
-				<table id="ste_tab" about="http://www.w3.org/2000/01/rdf-schema#stations_st_etienne" 
+				<table id="ste_tab" about="http://example.org/stations_strasbourg" 
 				class="w3-table-all w3-card-4 display table table-bordered w3-table-all w3-card-4">
 			  <tr>
 			    <th>Station name</th>
 			    <th>Capacity</th>
 			    <th>Available bikes</th>
 			  </tr>
-			  <tr typeof="rdf-schema:station_strasbourg"	th:each="stations_strasbourg : ${stations_strasbourg}">
+			  <tr typeof="ex:station_strasbourg"	th:each="stations_strasbourg : ${stations_strasbourg}">
 			  	<td property="name:station_name" th:if="${stations_strasbourg.location == 'strasbourg'}" th:text=${stations_strasbourg.name}></td>
 			    <td property="capacity:capacity" th:if="${stations_strasbourg.location == 'strasbourg'}" th:text=${stations_strasbourg.capacity}></td>
 			    <td property="nb_bikes:available_bikes" th:if="${stations_strasbourg.location == 'strasbourg'}" th:text=${stations_strasbourg.available_bikes}></td>
@@ -376,9 +372,6 @@
     </section>
     <script src="lib/jquery/jquery.min.js"></script>
   	<script src="lib/bootstrap/js/bootstrap.min.js"></script>
-    <!--footer end-->
-   
-	
 	
 	<script src="/js/dynamic.js"></script>
 </body>

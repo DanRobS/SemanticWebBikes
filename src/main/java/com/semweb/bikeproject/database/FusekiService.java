@@ -21,25 +21,24 @@ public class FusekiService {
 		String id = UUID.randomUUID().toString();
         System.out.println(String.format("Adding %s", id));
         QueryExecution qe = QueryExecutionFactory.sparqlService(
-                "http://localhost:3030/bike_dataset/sparql",
+                "http://localhost:3030/bike_dataset_2/sparql",
                 
                 //STATION DETAILS
-                "PREFIX location: <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>\n" + 
-                "PREFIX station: <http://www.w3.org/2000/01/rdf-schema#Stations>\n" + 
-                "PREFIX station_id: <http://www.w3.org/2000/01/rdf-schema#station_id>\n" + 
-                "PREFIX name: <http://www.w3.org/2000/01/rdf-schema#name>\n" + 
+                "PREFIX location: <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>\n" +
+                "PREFIX station_id: <http://example.org/station_id>\n" + 
+                "PREFIX name: <http://example.org/name>\n" + 
                 "PREFIX lat: <http://www.opengis.net/ont/geosparql#lat>\n" + 
                 "PREFIX lon: <http://www.opengis.net/ont/geosparql#lon>\n" + 
-                "PREFIX capacity: <http://www.w3.org/2000/01/rdf-schema#capacity>\n" + 
-                "PREFIX num_available_bikes: <http://www.w3.org/2000/01/rdf-schema#nb_velos_dispos>\n" +
+                "PREFIX capacity: <http://example.org/capacity>\n" + 
+                "PREFIX num_available_bikes: <http://example.org/nb_velos_dispos>\n" +
                 
                 //STATION LOCATIONS
-                "PREFIX station_lyon: <http://www.w3.org/2000/01/rdf-schema#stations_lyon>\n" + 
-                "PREFIX station_stetienne: <http://www.w3.org/2000/01/rdf-schema#stations_st_etienne>\n" + 
-                "PREFIX station_paris: <http://www.w3.org/2000/01/rdf-schema#stations_paris>\n" + 
-                "PREFIX station_strasbourg: <http://www.w3.org/2000/01/rdf-schema#stations_strasbourg>\n" + 
-                "PREFIX station_montpellier: <http://www.w3.org/2000/01/rdf-schema#stations_montpellier>\n" + 
-                "PREFIX station_rennes: <http://www.w3.org/2000/01/rdf-schema#stations_rennes>\n" +
+                "PREFIX station_lyon: <http://example.org/stations_lyon>\n" + 
+                "PREFIX station_stetienne: <http://example.org/stations_st_etienne>\n" + 
+                "PREFIX station_paris: <http://example.org/stations_paris>\n" + 
+                "PREFIX station_strasbourg: <http://example.org/stations_strasbourg>\n" + 
+                "PREFIX station_montpellier: <http://example.org/stations_montpellier>\n" + 
+                "PREFIX station_rennes: <http://example.org/stations_rennes>\n" +
                 
                 //SPARQL QUERY
                 "SELECT ?name ?cap ?available_bikes ?lat ?lon\n" + 
