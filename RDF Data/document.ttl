@@ -1,0 +1,273 @@
+
+@base          <http://example.org/> .
+@prefix geo:   <http://www.opengis.net/ont/geosparql#> .
+@prefix schema: <http://schema.org/> .
+@prefix ex:    <http://example.org/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix iter:  <http://w3id.org/sparql-generate/iter/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ite:   <http://w3id.org/sparql-generate/iter/> .
+@prefix fun:   <http://w3id.org/sparql-generate/fn/> .
+@prefix sosa:  <http://www.w3.org/ns/sosa/> .
+
+<http://loc.example.com/data/stations/A.%20France>
+        a                   ex:stations_st_etienne ;
+        ex:capacity         "16" ;
+        ex:name             "A. France" ;
+        ex:nb_velos_dispos  "8" ;
+        ex:station_id       "110" ;
+        geo:lat             "45.43065e0" ;
+        geo:lon             "4.389752e0" .
+
+<http://loc.example.com/data/stations/Centre%202>
+        a                   ex:stations_st_etienne ;
+        ex:capacity         "24" ;
+        ex:name             "Centre 2" ;
+        ex:nb_velos_dispos  "8" ;
+        ex:station_id       "113" ;
+        geo:lat             "45.42342e0" ;
+        geo:lon             "4.392292e0" .
+
+<http://loc.example.com/data/stations/H%C3%B4p.%20Nord>
+        a                   ex:stations_st_etienne ;
+        ex:capacity         "32" ;
+        ex:name             "Hôp. Nord" ;
+        ex:nb_velos_dispos  "8" ;
+        ex:station_id       "126" ;
+        geo:lat             "45.479487e0" ;
+        geo:lon             "4.362541e0" .
+
+<http://loc.example.com/data/stations/Tr%C3%A9filerie>
+        a                   ex:stations_st_etienne ;
+        ex:capacity         "24" ;
+        ex:name             "Tréfilerie" ;
+        ex:nb_velos_dispos  "8" ;
+        ex:station_id       "112" ;
+        geo:lat             "45.427296e0" ;
+        geo:lon             "4.390669e0" .
+
+<http://loc.example.com/data/stations/J.%20Moulin>
+        a                   ex:stations_st_etienne ;
+        ex:capacity         "16" ;
+        ex:name             "J. Moulin" ;
+        ex:nb_velos_dispos  "8" ;
+        ex:station_id       "118" ;
+        geo:lat             "45.437404e0" ;
+        geo:lon             "4.392469e0" .
+
+<http://loc.example.com/data/stations/Chal%C3%A9assiere>
+        a                   ex:stations_st_etienne ;
+        ex:capacity         "16" ;
+        ex:name             "Chaléassiere" ;
+        ex:nb_velos_dispos  "8" ;
+        ex:station_id       "102" ;
+        geo:lat             "45.453601e0" ;
+        geo:lon             "4.383062e0" .
+
+<http://loc.example.com/data/stations/St%20Francois>
+        a                   ex:stations_st_etienne ;
+        ex:capacity         "16" ;
+        ex:name             "St Francois" ;
+        ex:nb_velos_dispos  "8" ;
+        ex:station_id       "120" ;
+        geo:lat             "45.439538e0" ;
+        geo:lon             "4.403407e0" .
+
+<http://loc.example.com/data/stations/Clapier>
+        a                   ex:stations_st_etienne ;
+        ex:capacity         "16" ;
+        ex:name             "Clapier" ;
+        ex:nb_velos_dispos  "8" ;
+        ex:station_id       "107" ;
+        geo:lat             "45.436903e0" ;
+        geo:lon             "4.378789e0" .
+
+<http://loc.example.com/data/stations/Roannelle>
+        a                   ex:stations_st_etienne ;
+        ex:capacity         "16" ;
+        ex:name             "Roannelle" ;
+        ex:nb_velos_dispos  "8" ;
+        ex:station_id       "129" ;
+        geo:lat             "45.4357171e0" ;
+        geo:lon             "4.3829931e0" .
+
+<http://loc.example.com/data/stations/Carnot>
+        a                   ex:stations_st_etienne ;
+        ex:capacity         "24" ;
+        ex:name             "Carnot" ;
+        ex:nb_velos_dispos  "8" ;
+        ex:station_id       "103" ;
+        geo:lat             "45.447093e0" ;
+        geo:lon             "4.385487e0" .
+
+<http://loc.example.com/data/stations/J.%20Marc>
+        a                   ex:stations_st_etienne ;
+        ex:capacity         "24" ;
+        ex:name             "J. Marc" ;
+        ex:nb_velos_dispos  "8" ;
+        ex:station_id       "127" ;
+        geo:lat             "45.4732778e0" ;
+        geo:lon             "4.3665277e0" .
+
+<http://loc.example.com/data/stations/Tardy>
+        a                   ex:stations_st_etienne ;
+        ex:capacity         "12" ;
+        ex:name             "Tardy" ;
+        ex:nb_velos_dispos  "8" ;
+        ex:station_id       "111" ;
+        geo:lat             "45.427396e0" ;
+        geo:lon             "4.386718e0" .
+
+<http://loc.example.com/data/stations/Terrasse>
+        a                   ex:stations_st_etienne ;
+        ex:capacity         "16" ;
+        ex:name             "Terrasse" ;
+        ex:nb_velos_dispos  "8" ;
+        ex:station_id       "122" ;
+        geo:lat             "45.46502e0" ;
+        geo:lon             "4.37874e0" .
+
+<http://loc.example.com/data/stations/Dorian>
+        a                   ex:stations_st_etienne ;
+        ex:capacity         "32" ;
+        ex:name             "Dorian" ;
+        ex:nb_velos_dispos  "8" ;
+        ex:station_id       "106" ;
+        geo:lat             "45.43836e0" ;
+        geo:lon             "4.388435e0" .
+
+<http://loc.example.com/data/stations/Jacquard>
+        a                   ex:stations_st_etienne ;
+        ex:capacity         "12" ;
+        ex:name             "Jacquard" ;
+        ex:nb_velos_dispos  "8" ;
+        ex:station_id       "104" ;
+        geo:lat             "45.441888e0" ;
+        geo:lon             "4.382492e0" .
+
+<http://loc.example.com/data/stations/Ch%C3%A2teaucreux>
+        a                   ex:stations_st_etienne ;
+        ex:capacity         "32" ;
+        ex:name             "Châteaucreux" ;
+        ex:nb_velos_dispos  "8" ;
+        ex:station_id       "101" ;
+        geo:lat             "45.442972e0" ;
+        geo:lon             "4.398855e0" .
+
+<http://loc.example.com/data/stations/A.%20Thomas>
+        a                   ex:stations_st_etienne ;
+        ex:capacity         "16" ;
+        ex:name             "A. Thomas" ;
+        ex:nb_velos_dispos  "8" ;
+        ex:station_id       "109" ;
+        geo:lat             "45.4328e0" ;
+        geo:lon             "4.388035e0" .
+
+<http://loc.example.com/data/stations/Chavanelle>
+        a                   ex:stations_st_etienne ;
+        ex:capacity         "24" ;
+        ex:name             "Chavanelle" ;
+        ex:nb_velos_dispos  "8" ;
+        ex:station_id       "117" ;
+        geo:lat             "45.435109e0" ;
+        geo:lon             "4.391962e0" .
+
+<http://loc.example.com/data/stations/Janin>
+        a                   ex:stations_st_etienne ;
+        ex:capacity         "16" ;
+        ex:name             "Janin" ;
+        ex:nb_velos_dispos  "8" ;
+        ex:station_id       "124" ;
+        geo:lat             "45.448458e0" ;
+        geo:lon             "4.39492e0" .
+
+<http://loc.example.com/data/stations/Jaures>
+        a                   ex:stations_st_etienne ;
+        ex:capacity         "32" ;
+        ex:name             "Jaures" ;
+        ex:nb_velos_dispos  "8" ;
+        ex:station_id       "105" ;
+        geo:lat             "45.440725e0" ;
+        geo:lon             "4.387295e0" .
+
+<http://loc.example.com/data/stations/Villeboeuf>
+        a                   ex:stations_st_etienne ;
+        ex:capacity         "16" ;
+        ex:name             "Villeboeuf" ;
+        ex:nb_velos_dispos  "8" ;
+        ex:station_id       "116" ;
+        geo:lat             "45.431808e0" ;
+        geo:lon             "4.395127e0" .
+
+<http://loc.example.com/data/stations/Peuple>
+        a                   ex:stations_st_etienne ;
+        ex:capacity         "32" ;
+        ex:name             "Peuple" ;
+        ex:nb_velos_dispos  "8" ;
+        ex:station_id       "108" ;
+        geo:lat             "45.436265e0" ;
+        geo:lon             "4.387539e0" .
+
+<http://loc.example.com/data/stations/Fourneyron>
+        a                   ex:stations_st_etienne ;
+        ex:capacity         "24" ;
+        ex:name             "Fourneyron" ;
+        ex:nb_velos_dispos  "8" ;
+        ex:station_id       "119" ;
+        geo:lat             "45.4395e0" ;
+        geo:lon             "4.395669e0" .
+
+<http://loc.example.com/data/stations/Soleil>
+        a                   ex:stations_st_etienne ;
+        ex:capacity         "16" ;
+        ex:name             "Soleil" ;
+        ex:nb_velos_dispos  "8" ;
+        ex:station_id       "125" ;
+        geo:lat             "45.450533e0" ;
+        geo:lon             "4.403566e0" .
+
+<http://loc.example.com/data/stations/Marx>
+        a                   ex:stations_st_etienne ;
+        ex:capacity         "16" ;
+        ex:name             "Marx" ;
+        ex:nb_velos_dispos  "8" ;
+        ex:station_id       "123" ;
+        geo:lat             "45.422732e0" ;
+        geo:lon             "4.409376e0" .
+
+<http://loc.example.com/data/stations/Technopole>
+        a                   ex:stations_st_etienne ;
+        ex:capacity         "16" ;
+        ex:name             "Technopole" ;
+        ex:nb_velos_dispos  "8" ;
+        ex:station_id       "128" ;
+        geo:lat             "45.457e0" ;
+        geo:lon             "4.39241e0" .
+
+<http://loc.example.com/data/stations/Congr%C3%A8s>
+        a                   ex:stations_st_etienne ;
+        ex:capacity         "24" ;
+        ex:name             "Congrès" ;
+        ex:nb_velos_dispos  "8" ;
+        ex:station_id       "115" ;
+        geo:lat             "45.426972e0" ;
+        geo:lon             "4.404048e0" .
+
+<http://loc.example.com/data/stations/Bellevue>
+        a                   ex:stations_st_etienne ;
+        ex:capacity         "24" ;
+        ex:name             "Bellevue" ;
+        ex:nb_velos_dispos  "8" ;
+        ex:station_id       "114" ;
+        geo:lat             "45.415579e0" ;
+        geo:lon             "4.393322e0" .
+
+<http://loc.example.com/data/stations/Bicentenaire>
+        a                   ex:stations_st_etienne ;
+        ex:capacity         "16" ;
+        ex:name             "Bicentenaire" ;
+        ex:nb_velos_dispos  "8" ;
+        ex:station_id       "130" ;
+        geo:lat             "45.420286e0" ;
+        geo:lon             "4.392776e0" .

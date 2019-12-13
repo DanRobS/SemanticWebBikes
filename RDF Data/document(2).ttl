@@ -1,0 +1,102 @@
+
+@base          <http://example.org/> .
+@prefix geo:   <http://www.opengis.net/ont/geosparql#> .
+@prefix schema: <http://schema.org/> .
+@prefix ex:    <http://example.org/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix iter:  <http://w3id.org/sparql-generate/iter/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ite:   <http://w3id.org/sparql-generate/iter/> .
+@prefix fun:   <http://w3id.org/sparql-generate/fn/> .
+@prefix sosa:  <http://www.w3.org/ns/sosa/> .
+
+<http://loc.example.com/data/stations/Jourdan%20-%20Stade%20Charl%C3%A9ty>
+        a                   ex:stations_paris ;
+        ex:capacity         "60" ;
+        ex:name             "Jourdan - Stade Charléty" ;
+        ex:nb_velos_dispos  "7" ;
+        ex:station_id       "14014" ;
+        geo:lat             "48.81942833336948e0" ;
+        geo:lon             "2.343335375189781e0" .
+
+<http://loc.example.com/data/stations/Mairie%20du%2012%C3%A8me>
+        a                   ex:stations_paris ;
+        ex:capacity         "30" ;
+        ex:name             "Mairie du 12ème" ;
+        ex:nb_velos_dispos  "15" ;
+        ex:station_id       "12109" ;
+        geo:lat             "48.84085531176338e0" ;
+        geo:lon             "2.3875549435615544e0" .
+
+<http://loc.example.com/data/stations/Charonne%20-%20Robert%20et%20Sonia%20Delauney>
+        a                   ex:stations_paris ;
+        ex:capacity         "20" ;
+        ex:name             "Charonne - Robert et Sonia Delauney" ;
+        ex:nb_velos_dispos  "1" ;
+        ex:station_id       "11104" ;
+        geo:lat             "48.85590755596891e0" ;
+        geo:lon             "2.3925706744194035e0" .
+
+<http://loc.example.com/data/stations/Toudouze%20-%20Clauzel>
+        a                   ex:stations_paris ;
+        ex:capacity         "21" ;
+        ex:name             "Toudouze - Clauzel" ;
+        ex:nb_velos_dispos  "2" ;
+        ex:station_id       "9020" ;
+        geo:lat             "48.87929591733507e0" ;
+        geo:lon             "2.3373600840568547e0" .
+
+<http://loc.example.com/data/stations/Jouffroy%20d%27Abbans%20-%20Wagram>
+        a                   ex:stations_paris ;
+        ex:capacity         "0" ;
+        ex:name             "Jouffroy d'Abbans - Wagram" ;
+        ex:nb_velos_dispos  "2" ;
+        ex:station_id       "17026" ;
+        geo:lat             "48.881973298351625e0" ;
+        geo:lon             "2.301132157444954e0" .
+
+<http://loc.example.com/data/stations/Benjamin%20Godard%20-%20Victor%20Hugo>
+        a                   ex:stations_paris ;
+        ex:capacity         "35" ;
+        ex:name             "Benjamin Godard - Victor Hugo" ;
+        ex:nb_velos_dispos  "5" ;
+        ex:station_id       "16107" ;
+        geo:lat             "48.865983e0" ;
+        geo:lon             "2.275725e0" .
+
+<http://loc.example.com/data/stations/Faubourg%20Du%20Temple%20-%20Republique>
+        a                   ex:stations_paris ;
+        ex:capacity         "38" ;
+        ex:name             "Faubourg Du Temple - Republique" ;
+        ex:nb_velos_dispos  "4" ;
+        ex:station_id       "11037" ;
+        geo:lat             "48.867872484748744e0" ;
+        geo:lon             "2.3648982158072323e0" .
+
+<http://loc.example.com/data/stations/Andr%C3%A9%20Mazet%20-%20Saint-Andr%C3%A9%20des%20Arts>
+        a                   ex:stations_paris ;
+        ex:capacity         "52" ;
+        ex:name             "André Mazet - Saint-André des Arts" ;
+        ex:nb_velos_dispos  "0" ;
+        ex:station_id       "6015" ;
+        geo:lat             "48.85375581057431e0" ;
+        geo:lon             "2.3390958085656166e0" .
+
+<http://loc.example.com/data/stations/Square%20Boucicaut>
+        a                   ex:stations_paris ;
+        ex:capacity         "60" ;
+        ex:name             "Square Boucicaut" ;
+        ex:nb_velos_dispos  "0" ;
+        ex:station_id       "7003" ;
+        geo:lat             "48.851296433665276e0" ;
+        geo:lon             "2.325061820447445e0" .
+
+<http://loc.example.com/data/stations/Harpe%20-%20Saint-Germain>
+        a                   ex:stations_paris ;
+        ex:capacity         "1" ;
+        ex:name             "Harpe - Saint-Germain" ;
+        ex:nb_velos_dispos  "1" ;
+        ex:station_id       "5001" ;
+        geo:lat             "48.85151881501689e0" ;
+        geo:lon             "2.343670316040516e0" .

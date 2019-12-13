@@ -1,0 +1,201 @@
+
+@base          <http://example.org/> .
+@prefix geo:   <http://www.opengis.net/ont/geosparql#> .
+@prefix schema: <http://schema.org/> .
+@prefix ex:    <http://example.org/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix iter:  <http://w3id.org/sparql-generate/iter/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ite:   <http://w3id.org/sparql-generate/iter/> .
+@prefix fun:   <http://w3id.org/sparql-generate/fn/> .
+@prefix sosa:  <http://www.w3.org/ns/sosa/> .
+
+<http://loc.example.com/data/stations/106%20Gare%20Sud>
+        a                   ex:stations_strasbourg ;
+        ex:capacity         "32" ;
+        ex:name             "106 Gare Sud" ;
+        ex:nb_velos_dispos  "21" ;
+        ex:station_id       "106" ;
+        geo:lat             "48.584209" ;
+        geo:lon             "7.734519" .
+
+<http://loc.example.com/data/stations/103%20Gare%20de%20Strasbourg>
+        a                   ex:stations_strasbourg ;
+        ex:capacity         "31" ;
+        ex:name             "103 Gare de Strasbourg" ;
+        ex:nb_velos_dispos  "10" ;
+        ex:station_id       "103" ;
+        geo:lat             "48.585082" ;
+        geo:lon             "7.735024" .
+
+<http://loc.example.com/data/stations/109%20Place%20Arnold>
+        a                   ex:stations_strasbourg ;
+        ex:capacity         "28" ;
+        ex:name             "109 Place Arnold" ;
+        ex:nb_velos_dispos  "10" ;
+        ex:station_id       "109" ;
+        geo:lat             "48.584504" ;
+        geo:lon             "7.768772" .
+
+<http://loc.example.com/data/stations/107%20Universit%C3%AF%C2%BF%C2%BD>
+        a                   ex:stations_strasbourg ;
+        ex:capacity         "32" ;
+        ex:name             "107 Universitï¿½" ;
+        ex:nb_velos_dispos  "8" ;
+        ex:station_id       "107" ;
+        geo:lat             "48.582023" ;
+        geo:lon             "7.766771" .
+
+<http://loc.example.com/data/stations/115%20Hoenheim%20Gare>
+        a                   ex:stations_strasbourg ;
+        ex:capacity         "16" ;
+        ex:name             "115 Hoenheim Gare" ;
+        ex:nb_velos_dispos  "12" ;
+        ex:station_id       "115" ;
+        geo:lat             "48.628353" ;
+        geo:lon             "7.760103" .
+
+<http://loc.example.com/data/stations/126%20Espace%20Europ%C3%AF%C2%BF%C2%BDen%20de%20l%27Entreprise>
+        a                   ex:stations_strasbourg ;
+        ex:capacity         "16" ;
+        ex:name             "126 Espace Europï¿½en de l'Entreprise" ;
+        ex:nb_velos_dispos  "8" ;
+        ex:station_id       "126" ;
+        geo:lat             "48.612597" ;
+        geo:lon             "7.711630" .
+
+<http://loc.example.com/data/stations/110%20Robertsau%20Boecklin>
+        a                   ex:stations_strasbourg ;
+        ex:capacity         "32" ;
+        ex:name             "110 Robertsau Boecklin" ;
+        ex:nb_velos_dispos  "7" ;
+        ex:station_id       "110" ;
+        geo:lat             "48.598096" ;
+        geo:lon             "7.777902" .
+
+<http://loc.example.com/data/stations/105%20Rotonde>
+        a                   ex:stations_strasbourg ;
+        ex:capacity         "32" ;
+        ex:name             "105 Rotonde" ;
+        ex:nb_velos_dispos  "8" ;
+        ex:station_id       "105" ;
+        geo:lat             "48.591639" ;
+        geo:lon             "7.725089" .
+
+<http://loc.example.com/data/stations/113%20Parking%20Broglie>
+        a                   ex:stations_strasbourg ;
+        ex:capacity         "30" ;
+        ex:name             "113 Parking Broglie" ;
+        ex:nb_velos_dispos  "14" ;
+        ex:station_id       "113" ;
+        geo:lat             "48.585415" ;
+        geo:lon             "7.749395" .
+
+<http://loc.example.com/data/stations/108%20Gare%20Nord>
+        a                   ex:stations_strasbourg ;
+        ex:capacity         "32" ;
+        ex:name             "108 Gare Nord" ;
+        ex:nb_velos_dispos  "5" ;
+        ex:station_id       "108" ;
+        geo:lat             "48.585678" ;
+        geo:lon             "7.733542" .
+
+<http://loc.example.com/data/stations/102%20Centre%202>
+        a                   ex:stations_strasbourg ;
+        ex:capacity         "20" ;
+        ex:name             "102 Centre 2" ;
+        ex:nb_velos_dispos  "1" ;
+        ex:station_id       "102" ;
+        geo:lat             "48.578462" ;
+        geo:lon             "7.749776" .
+
+<http://loc.example.com/data/stations/125%20Place%20du%20March%C3%AF%C2%BF%C2%BD%20Neudorf>
+        a                   ex:stations_strasbourg ;
+        ex:capacity         "32" ;
+        ex:name             "125 Place du Marchï¿½ Neudorf" ;
+        ex:nb_velos_dispos  "13" ;
+        ex:station_id       "125" ;
+        geo:lat             "48.565864" ;
+        geo:lon             "7.759242" .
+
+<http://loc.example.com/data/stations/122%20Schiltigheim%20Mairie>
+        a                   ex:stations_strasbourg ;
+        ex:capacity         "16" ;
+        ex:name             "122 Schiltigheim Mairie" ;
+        ex:nb_velos_dispos  "7" ;
+        ex:station_id       "122" ;
+        geo:lat             "48.606759" ;
+        geo:lon             "7.749183" .
+
+<http://loc.example.com/data/stations/124%20Auberge%20de%20jeunesse>
+        a                   ex:stations_strasbourg ;
+        ex:capacity         "16" ;
+        ex:name             "124 Auberge de jeunesse" ;
+        ex:nb_velos_dispos  "6" ;
+        ex:station_id       "124" ;
+        geo:lat             "48.568644" ;
+        geo:lon             "7.795621" .
+
+<http://loc.example.com/data/stations/114%20Parking%20Austerlitz>
+        a                   ex:stations_strasbourg ;
+        ex:capacity         "30" ;
+        ex:name             "114 Parking Austerlitz" ;
+        ex:nb_velos_dispos  "9" ;
+        ex:station_id       "114" ;
+        geo:lat             "48.578005" ;
+        geo:lon             "7.751863" .
+
+<http://loc.example.com/data/stations/111%20Campus%20d%27Illkirch>
+        a                   ex:stations_strasbourg ;
+        ex:capacity         "30" ;
+        ex:name             "111 Campus d'Illkirch" ;
+        ex:nb_velos_dispos  "5" ;
+        ex:station_id       "111" ;
+        geo:lat             "48.529616" ;
+        geo:lon             "7.734226" .
+
+<http://loc.example.com/data/stations/123%20Koenigshoffen>
+        a                   ex:stations_strasbourg ;
+        ex:capacity         "26" ;
+        ex:name             "123 Koenigshoffen" ;
+        ex:nb_velos_dispos  "7" ;
+        ex:station_id       "123" ;
+        geo:lat             "48.579100" ;
+        geo:lon             "7.713481" .
+
+<http://loc.example.com/data/stations/112%20Hohwart>
+        a                   ex:stations_strasbourg ;
+        ex:capacity         "10" ;
+        ex:name             "112 Hohwart" ;
+        ex:nb_velos_dispos  "7" ;
+        ex:station_id       "112" ;
+        geo:lat             "48.549190" ;
+        geo:lon             "7.740754" .
+
+<http://loc.example.com/data/stations/101%20Centre>
+        a                   ex:stations_strasbourg ;
+        ex:capacity         "32" ;
+        ex:name             "101 Centre" ;
+        ex:nb_velos_dispos  "22" ;
+        ex:station_id       "101" ;
+        geo:lat             "48.578462" ;
+        geo:lon             "7.749776" .
+
+<http://loc.example.com/data/stations/127%20Ostwald%20H%C3%AF%C2%BF%C2%BDtel%20de%20Ville>
+        a                   ex:stations_strasbourg ;
+        ex:capacity         "16" ;
+        ex:name             "127 Ostwald Hï¿½tel de Ville" ;
+        ex:nb_velos_dispos  "5" ;
+        ex:station_id       "127" ;
+        geo:lat             "48.551032" ;
+        geo:lon             "7.711200" .
+
+<http://loc.example.com/data/stations/116%20Place%20Islande>
+        a                   ex:stations_strasbourg ;
+        ex:capacity         "16" ;
+        ex:name             "116 Place Islande" ;
+        ex:nb_velos_dispos  "9" ;
+        ex:station_id       "116" ;
+        geo:lat             "48.580314" ;
+        geo:lon             "7.776203" .

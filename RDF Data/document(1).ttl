@@ -1,0 +1,102 @@
+
+@base          <http://example.org/> .
+@prefix geo:   <http://www.opengis.net/ont/geosparql#> .
+@prefix schema: <http://schema.org/> .
+@prefix ex:    <http://example.org/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix iter:  <http://w3id.org/sparql-generate/iter/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ite:   <http://w3id.org/sparql-generate/iter/> .
+@prefix fun:   <http://w3id.org/sparql-generate/fn/> .
+@prefix sosa:  <http://www.w3.org/ns/sosa/> .
+
+<http://loc.example.com/data/stations/Plaine%20de%20Baud>
+        a                   ex:stations_rennes ;
+        ex:capacity         "24" ;
+        ex:name             "Plaine de Baud" ;
+        ex:nb_velos_dispos  "6" ;
+        ex:station_id       "5546" ;
+        geo:lat             "48.112461e0" ;
+        geo:lon             "-1.643674e0" .
+
+<http://loc.example.com/data/stations/Marbeuf>
+        a                   ex:stations_rennes ;
+        ex:capacity         "20" ;
+        ex:name             "Marbeuf" ;
+        ex:nb_velos_dispos  "2" ;
+        ex:station_id       "5538" ;
+        geo:lat             "48.111749e0" ;
+        geo:lon             "-1.702077e0" .
+
+<http://loc.example.com/data/stations/Mus%C3%A9e%20Beaux-Arts>
+        a                   ex:stations_rennes ;
+        ex:capacity         "16" ;
+        ex:name             "Musée Beaux-Arts" ;
+        ex:nb_velos_dispos  "5" ;
+        ex:station_id       "5510" ;
+        geo:lat             "48.109601e0" ;
+        geo:lon             "-1.67408e0" .
+
+<http://loc.example.com/data/stations/Champs%20Libres>
+        a                   ex:stations_rennes ;
+        ex:capacity         "24" ;
+        ex:name             "Champs Libres" ;
+        ex:nb_velos_dispos  "9" ;
+        ex:station_id       "5516" ;
+        geo:lat             "48.105537e0" ;
+        geo:lon             "-1.674328e0" .
+
+<http://loc.example.com/data/stations/La%20Cri%C3%A9e>
+        a                   ex:stations_rennes ;
+        ex:capacity         "24" ;
+        ex:name             "La Criée" ;
+        ex:nb_velos_dispos  "8" ;
+        ex:station_id       "5521" ;
+        geo:lat             "48.107626e0" ;
+        geo:lon             "-1.680085e0" .
+
+<http://loc.example.com/data/stations/Brest%20-%20Verdun>
+        a                   ex:stations_rennes ;
+        ex:capacity         "24" ;
+        ex:name             "Brest - Verdun" ;
+        ex:nb_velos_dispos  "18" ;
+        ex:station_id       "5534" ;
+        geo:lat             "48.113009e0" ;
+        geo:lon             "-1.693264e0" .
+
+<http://loc.example.com/data/stations/Turmel>
+        a                   ex:stations_rennes ;
+        ex:capacity         "16" ;
+        ex:name             "Turmel" ;
+        ex:nb_velos_dispos  "8" ;
+        ex:station_id       "5581" ;
+        geo:lat             "48.122147e0" ;
+        geo:lon             "-1.650808e0" .
+
+<http://loc.example.com/data/stations/La%20Poterie>
+        a                   ex:stations_rennes ;
+        ex:capacity         "28" ;
+        ex:name             "La Poterie" ;
+        ex:nb_velos_dispos  "13" ;
+        ex:station_id       "5582" ;
+        geo:lat             "48.087282e0" ;
+        geo:lon             "-1.644121e0" .
+
+<http://loc.example.com/data/stations/Painlev%C3%A9>
+        a                   ex:stations_rennes ;
+        ex:capacity         "18" ;
+        ex:name             "Painlevé" ;
+        ex:nb_velos_dispos  "12" ;
+        ex:station_id       "5580" ;
+        geo:lat             "48.122994e0" ;
+        geo:lon             "-1.660547e0" .
+
+<http://loc.example.com/data/stations/Gros-Ch%C3%AAne>
+        a                   ex:stations_rennes ;
+        ex:capacity         "18" ;
+        ex:name             "Gros-Chêne" ;
+        ex:nb_velos_dispos  "9" ;
+        ex:station_id       "5578" ;
+        geo:lat             "48.126795e0" ;
+        geo:lon             "-1.665101e0" .

@@ -1,0 +1,525 @@
+
+@base          <http://example.org/> .
+@prefix geo:   <http://www.opengis.net/ont/geosparql#> .
+@prefix schema: <http://schema.org/> .
+@prefix ex:    <http://example.org/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix iter:  <http://w3id.org/sparql-generate/iter/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ite:   <http://w3id.org/sparql-generate/iter/> .
+@prefix fun:   <http://w3id.org/sparql-generate/fn/> .
+@prefix sosa:  <http://www.w3.org/ns/sosa/> .
+
+<http://loc.example.com/data/stations/26%20Renouvier>
+        a                   ex:stations_montpellier ;
+        ex:capacity         "8" ;
+        ex:name             "26 Renouvier" ;
+        ex:nb_velos_dispos  "6" ;
+        ex:station_id       "26" ;
+        geo:lat             "43.603553" ;
+        geo:lon             "3.867884" .
+
+<http://loc.example.com/data/stations/25%20Nouveau%20Saint-Roch>
+        a                   ex:stations_montpellier ;
+        ex:capacity         "8" ;
+        ex:name             "25 Nouveau Saint-Roch" ;
+        ex:nb_velos_dispos  "4" ;
+        ex:station_id       "25" ;
+        geo:lat             "43.599817" ;
+        geo:lon             "3.875757" .
+
+<http://loc.example.com/data/stations/5%20Corum>
+        a                   ex:stations_montpellier ;
+        ex:capacity         "12" ;
+        ex:name             "5 Corum" ;
+        ex:nb_velos_dispos  "10" ;
+        ex:station_id       "5" ;
+        geo:lat             "43.613989" ;
+        geo:lon             "3.881600" .
+
+<http://loc.example.com/data/stations/55%20P%C3%AF%C2%BF%C2%BDrols%20Etang%20de%20l%27Or>
+        a                   ex:stations_montpellier ;
+        ex:capacity         "68" ;
+        ex:name             "55 Pï¿½rols Etang de l'Or" ;
+        ex:nb_velos_dispos  "25" ;
+        ex:station_id       "55" ;
+        geo:lat             "43.558351" ;
+        geo:lon             "3.963412" .
+
+<http://loc.example.com/data/stations/32%20Pr%C3%AF%C2%BF%C2%BDs%20d%27Ar%C3%AF%C2%BF%C2%BDnes>
+        a                   ex:stations_montpellier ;
+        ex:capacity         "8" ;
+        ex:name             "32 Prï¿½s d'Arï¿½nes" ;
+        ex:nb_velos_dispos  "8" ;
+        ex:station_id       "32" ;
+        geo:lat             "43.590480" ;
+        geo:lon             "3.884611" .
+
+<http://loc.example.com/data/stations/51%20Pont%20de%20Lattes%20-%20Gare%20Saint-Roch>
+        a                   ex:stations_montpellier ;
+        ex:capacity         "12" ;
+        ex:name             "51 Pont de Lattes - Gare Saint-Roch" ;
+        ex:nb_velos_dispos  "8" ;
+        ex:station_id       "51" ;
+        geo:lat             "43.606036" ;
+        geo:lon             "3.882393" .
+
+<http://loc.example.com/data/stations/57%20Saint-Guilhem%20-%20Courreau>
+        a                   ex:stations_montpellier ;
+        ex:capacity         "8" ;
+        ex:name             "57 Saint-Guilhem - Courreau" ;
+        ex:nb_velos_dispos  "5" ;
+        ex:station_id       "57" ;
+        geo:lat             "43.608996" ;
+        geo:lon             "3.872752" .
+
+<http://loc.example.com/data/stations/42%20Marie%20Caizergues>
+        a                   ex:stations_montpellier ;
+        ex:capacity         "8" ;
+        ex:name             "42 Marie Caizergues" ;
+        ex:nb_velos_dispos  "7" ;
+        ex:station_id       "42" ;
+        geo:lat             "43.619871" ;
+        geo:lon             "3.873812" .
+
+<http://loc.example.com/data/stations/4%20H%C3%AF%C2%BF%C2%BDtel%20de%20Ville>
+        a                   ex:stations_montpellier ;
+        ex:capacity         "16" ;
+        ex:name             "4 Hï¿½tel de Ville" ;
+        ex:nb_velos_dispos  "4" ;
+        ex:station_id       "4" ;
+        geo:lat             "43.599088" ;
+        geo:lon             "3.894866" .
+
+<http://loc.example.com/data/stations/27%20Odysseum>
+        a                   ex:stations_montpellier ;
+        ex:capacity         "8" ;
+        ex:name             "27 Odysseum" ;
+        ex:nb_velos_dispos  "8" ;
+        ex:station_id       "27" ;
+        geo:lat             "43.603727" ;
+        geo:lon             "3.918979" .
+
+<http://loc.example.com/data/stations/23%20Les%20Arceaux>
+        a                   ex:stations_montpellier ;
+        ex:capacity         "16" ;
+        ex:name             "23 Les Arceaux" ;
+        ex:nb_velos_dispos  "8" ;
+        ex:station_id       "23" ;
+        geo:lat             "43.611991" ;
+        geo:lon             "3.867157" .
+
+<http://loc.example.com/data/stations/31%20Voltaire>
+        a                   ex:stations_montpellier ;
+        ex:capacity         "8" ;
+        ex:name             "31 Voltaire" ;
+        ex:nb_velos_dispos  "4" ;
+        ex:station_id       "31" ;
+        geo:lat             "43.603767" ;
+        geo:lon             "3.888659" .
+
+<http://loc.example.com/data/stations/49%20Tonnelles>
+        a                   ex:stations_montpellier ;
+        ex:capacity         "8" ;
+        ex:name             "49 Tonnelles" ;
+        ex:nb_velos_dispos  "2" ;
+        ex:station_id       "49" ;
+        geo:lat             "43.615155" ;
+        geo:lon             "3.839466" .
+
+<http://loc.example.com/data/stations/53%20Deux%20Ponts%20-%20Gare%20Saint-Roch>
+        a                   ex:stations_montpellier ;
+        ex:capacity         "8" ;
+        ex:name             "53 Deux Ponts - Gare Saint-Roch" ;
+        ex:nb_velos_dispos  "1" ;
+        ex:station_id       "53" ;
+        geo:lat             "43.604319" ;
+        geo:lon             "3.880916" .
+
+<http://loc.example.com/data/stations/34%20Vert%20Bois>
+        a                   ex:stations_montpellier ;
+        ex:capacity         "16" ;
+        ex:name             "34 Vert Bois" ;
+        ex:nb_velos_dispos  "4" ;
+        ex:station_id       "34" ;
+        geo:lat             "43.634580" ;
+        geo:lon             "3.868230" .
+
+<http://loc.example.com/data/stations/18%20Nombre%20d%27Or>
+        a                   ex:stations_montpellier ;
+        ex:capacity         "16" ;
+        ex:name             "18 Nombre d'Or" ;
+        ex:nb_velos_dispos  "9" ;
+        ex:station_id       "18" ;
+        geo:lat             "43.607859" ;
+        geo:lon             "3.886644" .
+
+<http://loc.example.com/data/stations/36%20Occitanie>
+        a                   ex:stations_montpellier ;
+        ex:capacity         "32" ;
+        ex:name             "36 Occitanie" ;
+        ex:nb_velos_dispos  "5" ;
+        ex:station_id       "36" ;
+        geo:lat             "43.634242" ;
+        geo:lon             "3.849128" .
+
+<http://loc.example.com/data/stations/44%20Celleneuve>
+        a                   ex:stations_montpellier ;
+        ex:capacity         "8" ;
+        ex:name             "44 Celleneuve" ;
+        ex:nb_velos_dispos  "3" ;
+        ex:station_id       "44" ;
+        geo:lat             "43.614670" ;
+        geo:lon             "3.832624" .
+
+<http://loc.example.com/data/stations/14%20Beaux-Arts>
+        a                   ex:stations_montpellier ;
+        ex:capacity         "8" ;
+        ex:name             "14 Beaux-Arts" ;
+        ex:nb_velos_dispos  "1" ;
+        ex:station_id       "14" ;
+        geo:lat             "43.616698" ;
+        geo:lon             "3.884981" .
+
+<http://loc.example.com/data/stations/12%20Boutonnet>
+        a                   ex:stations_montpellier ;
+        ex:capacity         "12" ;
+        ex:name             "12 Boutonnet" ;
+        ex:nb_velos_dispos  "6" ;
+        ex:station_id       "12" ;
+        geo:lat             "43.622629" ;
+        geo:lon             "3.868375" .
+
+<http://loc.example.com/data/stations/35%20Malbosc>
+        a                   ex:stations_montpellier ;
+        ex:capacity         "8" ;
+        ex:name             "35 Malbosc" ;
+        ex:nb_velos_dispos  "5" ;
+        ex:station_id       "35" ;
+        geo:lat             "43.633679" ;
+        geo:lon             "3.832861" .
+
+<http://loc.example.com/data/stations/21%20Port%20Marianne>
+        a                   ex:stations_montpellier ;
+        ex:capacity         "16" ;
+        ex:name             "21 Port Marianne" ;
+        ex:nb_velos_dispos  "6" ;
+        ex:station_id       "21" ;
+        geo:lat             "43.600320" ;
+        geo:lon             "3.898510" .
+
+<http://loc.example.com/data/stations/10%20Rondelet>
+        a                   ex:stations_montpellier ;
+        ex:capacity         "16" ;
+        ex:name             "10 Rondelet" ;
+        ex:nb_velos_dispos  "3" ;
+        ex:station_id       "10" ;
+        geo:lat             "43.603038" ;
+        geo:lon             "3.875796" .
+
+<http://loc.example.com/data/stations/48%20H%C3%AF%C2%BF%C2%BDtel%20du%20D%C3%AF%C2%BF%C2%BDpartement>
+        a                   ex:stations_montpellier ;
+        ex:capacity         "8" ;
+        ex:name             "48 Hï¿½tel du Dï¿½partement" ;
+        ex:nb_velos_dispos  "0" ;
+        ex:station_id       "48" ;
+        geo:lat             "43.621682" ;
+        geo:lon             "3.834770" .
+
+<http://loc.example.com/data/stations/28%20Saint-Denis>
+        a                   ex:stations_montpellier ;
+        ex:capacity         "8" ;
+        ex:name             "28 Saint-Denis" ;
+        ex:nb_velos_dispos  "3" ;
+        ex:station_id       "28" ;
+        geo:lat             "43.605021" ;
+        geo:lon             "3.875065" .
+
+<http://loc.example.com/data/stations/43%20Sabines>
+        a                   ex:stations_montpellier ;
+        ex:capacity         "8" ;
+        ex:name             "43 Sabines" ;
+        ex:nb_velos_dispos  "4" ;
+        ex:station_id       "43" ;
+        geo:lat             "43.584211" ;
+        geo:lon             "3.860031" .
+
+<http://loc.example.com/data/stations/6%20Place%20Albert%201er%20-%20St%20Charles>
+        a                   ex:stations_montpellier ;
+        ex:capacity         "31" ;
+        ex:name             "6 Place Albert 1er - St Charles" ;
+        ex:nb_velos_dispos  "18" ;
+        ex:station_id       "6" ;
+        geo:lat             "43.616768" ;
+        geo:lon             "3.873375" .
+
+<http://loc.example.com/data/stations/8%20Halles%20Castellane>
+        a                   ex:stations_montpellier ;
+        ex:capacity         "16" ;
+        ex:name             "8 Halles Castellane" ;
+        ex:nb_velos_dispos  "6" ;
+        ex:station_id       "8" ;
+        geo:lat             "43.609935" ;
+        geo:lon             "3.877208" .
+
+<http://loc.example.com/data/stations/15%20Les%20Aubes>
+        a                   ex:stations_montpellier ;
+        ex:capacity         "8" ;
+        ex:name             "15 Les Aubes" ;
+        ex:nb_velos_dispos  "6" ;
+        ex:station_id       "15" ;
+        geo:lat             "43.618692" ;
+        geo:lon             "3.893844" .
+
+<http://loc.example.com/data/stations/9%20Observatoire>
+        a                   ex:stations_montpellier ;
+        ex:capacity         "8" ;
+        ex:name             "9 Observatoire" ;
+        ex:nb_velos_dispos  "1" ;
+        ex:station_id       "9" ;
+        geo:lat             "43.606081" ;
+        geo:lon             "3.876931" .
+
+<http://loc.example.com/data/stations/38%20Fac%20de%20Lettres>
+        a                   ex:stations_montpellier ;
+        ex:capacity         "16" ;
+        ex:name             "38 Fac de Lettres" ;
+        ex:nb_velos_dispos  "5" ;
+        ex:station_id       "38" ;
+        geo:lat             "43.630665" ;
+        geo:lon             "3.870230" .
+
+<http://loc.example.com/data/stations/54%20Providence%20-%20Ovalie>
+        a                   ex:stations_montpellier ;
+        ex:capacity         "8" ;
+        ex:name             "54 Providence - Ovalie" ;
+        ex:nb_velos_dispos  "4" ;
+        ex:station_id       "54" ;
+        geo:lat             "43.588239" ;
+        geo:lon             "3.853421" .
+
+<http://loc.example.com/data/stations/39%20Aiguelongue>
+        a                   ex:stations_montpellier ;
+        ex:capacity         "8" ;
+        ex:name             "39 Aiguelongue" ;
+        ex:nb_velos_dispos  "2" ;
+        ex:station_id       "39" ;
+        geo:lat             "43.626163" ;
+        geo:lon             "3.882492" .
+
+<http://loc.example.com/data/stations/1%20Rue%20Jules%20Ferry%20-%20Gare%20Saint-Roch>
+        a                   ex:stations_montpellier ;
+        ex:capacity         "16" ;
+        ex:name             "1 Rue Jules Ferry - Gare Saint-Roch" ;
+        ex:nb_velos_dispos  "4" ;
+        ex:station_id       "1" ;
+        geo:lat             "43.605366" ;
+        geo:lon             "3.881346" .
+
+<http://loc.example.com/data/stations/2%20Com%C3%AF%C2%BF%C2%BDdie>
+        a                   ex:stations_montpellier ;
+        ex:capacity         "24" ;
+        ex:name             "2 Comï¿½die" ;
+        ex:nb_velos_dispos  "12" ;
+        ex:station_id       "2" ;
+        geo:lat             "43.608148" ;
+        geo:lon             "3.878778" .
+
+<http://loc.example.com/data/stations/19%20Louis%20Blanc>
+        a                   ex:stations_montpellier ;
+        ex:capacity         "16" ;
+        ex:name             "19 Louis Blanc" ;
+        ex:nb_velos_dispos  "9" ;
+        ex:station_id       "19" ;
+        geo:lat             "43.614642" ;
+        geo:lon             "3.877648" .
+
+<http://loc.example.com/data/stations/22%20Clemenceau>
+        a                   ex:stations_montpellier ;
+        ex:capacity         "12" ;
+        ex:name             "22 Clemenceau" ;
+        ex:nb_velos_dispos  "8" ;
+        ex:station_id       "22" ;
+        geo:lat             "43.603539" ;
+        geo:lon             "3.872394" .
+
+<http://loc.example.com/data/stations/33%20Garcia%20Lorca>
+        a                   ex:stations_montpellier ;
+        ex:capacity         "8" ;
+        ex:name             "33 Garcia Lorca" ;
+        ex:nb_velos_dispos  "8" ;
+        ex:station_id       "33" ;
+        geo:lat             "43.590757" ;
+        geo:lon             "3.890616" .
+
+<http://loc.example.com/data/stations/45%20Jardin%20de%20la%20Lironde>
+        a                   ex:stations_montpellier ;
+        ex:capacity         "8" ;
+        ex:name             "45 Jardin de la Lironde" ;
+        ex:nb_velos_dispos  "5" ;
+        ex:station_id       "45" ;
+        geo:lat             "43.605850" ;
+        geo:lon             "3.911576" .
+
+<http://loc.example.com/data/stations/24%20Cit%C3%AF%C2%BF%C2%BD%20Mion>
+        a                   ex:stations_montpellier ;
+        ex:capacity         "8" ;
+        ex:name             "24 Citï¿½ Mion" ;
+        ex:nb_velos_dispos  "4" ;
+        ex:station_id       "24" ;
+        geo:lat             "43.601143" ;
+        geo:lon             "3.884373" .
+
+<http://loc.example.com/data/stations/29%20Richter>
+        a                   ex:stations_montpellier ;
+        ex:capacity         "16" ;
+        ex:name             "29 Richter" ;
+        ex:nb_velos_dispos  "5" ;
+        ex:station_id       "29" ;
+        geo:lat             "43.603424" ;
+        geo:lon             "3.899263" .
+
+<http://loc.example.com/data/stations/37%20FacdesSciences>
+        a                   ex:stations_montpellier ;
+        ex:capacity         "24" ;
+        ex:name             "37 FacdesSciences" ;
+        ex:nb_velos_dispos  "0" ;
+        ex:station_id       "37" ;
+        geo:lat             "43.631018" ;
+        geo:lon             "3.860697" .
+
+<http://loc.example.com/data/stations/46%20P%C3%AF%C2%BF%C2%BDre%20Soulas>
+        a                   ex:stations_montpellier ;
+        ex:capacity         "8" ;
+        ex:name             "46 Pï¿½re Soulas" ;
+        ex:nb_velos_dispos  "7" ;
+        ex:station_id       "46" ;
+        geo:lat             "43.621983" ;
+        geo:lon             "3.855603" .
+
+<http://loc.example.com/data/stations/41%20Eurom%C3%AF%C2%BF%C2%BDdecine>
+        a                   ex:stations_montpellier ;
+        ex:capacity         "8" ;
+        ex:name             "41 Euromï¿½decine" ;
+        ex:nb_velos_dispos  "4" ;
+        ex:station_id       "41" ;
+        geo:lat             "43.639119" ;
+        geo:lon             "3.828199" .
+
+<http://loc.example.com/data/stations/59%20Sud%20De%20France>
+        a                   ex:stations_montpellier ;
+        ex:capacity         "8" ;
+        ex:name             "59 Sud De France" ;
+        ex:nb_velos_dispos  "3" ;
+        ex:station_id       "59" ;
+        geo:lat             "43.595620" ;
+        geo:lon             "3.923500" .
+
+<http://loc.example.com/data/stations/56%20Albert%201er%20-%20Cath%C3%AF%C2%BF%C2%BDdrale>
+        a                   ex:stations_montpellier ;
+        ex:capacity         "12" ;
+        ex:name             "56 Albert 1er - Cathï¿½drale" ;
+        ex:nb_velos_dispos  "0" ;
+        ex:station_id       "56" ;
+        geo:lat             "43.614005" ;
+        geo:lon             "3.873218" .
+
+<http://loc.example.com/data/stations/11%20Plan%20Cabanes>
+        a                   ex:stations_montpellier ;
+        ex:capacity         "12" ;
+        ex:name             "11 Plan Cabanes" ;
+        ex:nb_velos_dispos  "9" ;
+        ex:station_id       "11" ;
+        geo:lat             "43.608491" ;
+        geo:lon             "3.868389" .
+
+<http://loc.example.com/data/stations/30%20Charles%20Flahault>
+        a                   ex:stations_montpellier ;
+        ex:capacity         "8" ;
+        ex:name             "30 Charles Flahault" ;
+        ex:nb_velos_dispos  "6" ;
+        ex:station_id       "30" ;
+        geo:lat             "43.618762" ;
+        geo:lon             "3.865971" .
+
+<http://loc.example.com/data/stations/7%20Foch>
+        a                   ex:stations_montpellier ;
+        ex:capacity         "8" ;
+        ex:name             "7 Foch" ;
+        ex:nb_velos_dispos  "8" ;
+        ex:station_id       "7" ;
+        geo:lat             "43.610989" ;
+        geo:lon             "3.873345" .
+
+<http://loc.example.com/data/stations/50%20Parvis%20Jules%20Ferry%20-%20Gare%20Saint-Roch>
+        a                   ex:stations_montpellier ;
+        ex:capacity         "8" ;
+        ex:name             "50 Parvis Jules Ferry - Gare Saint-Roch" ;
+        ex:nb_velos_dispos  "5" ;
+        ex:station_id       "50" ;
+        geo:lat             "43.603889" ;
+        geo:lon             "3.879362" .
+
+<http://loc.example.com/data/stations/17%20M%C3%AF%C2%BF%C2%BDdiath%C3%AF%C2%BF%C2%BDque%20Emile%20Zola>
+        a                   ex:stations_montpellier ;
+        ex:capacity         "16" ;
+        ex:name             "17 Mï¿½diathï¿½que Emile Zola" ;
+        ex:nb_velos_dispos  "10" ;
+        ex:station_id       "17" ;
+        geo:lat             "43.608218" ;
+        geo:lon             "3.893140" .
+
+<http://loc.example.com/data/stations/20%20Gambetta>
+        a                   ex:stations_montpellier ;
+        ex:capacity         "8" ;
+        ex:name             "20 Gambetta" ;
+        ex:nb_velos_dispos  "6" ;
+        ex:station_id       "20" ;
+        geo:lat             "43.607106" ;
+        geo:lon             "3.870693" .
+
+<http://loc.example.com/data/stations/40%20Jeu%20de%20Mail%20des%20Abb%C3%AF%C2%BF%C2%BDs>
+        a                   ex:stations_montpellier ;
+        ex:capacity         "8" ;
+        ex:name             "40 Jeu de Mail des Abbï¿½s" ;
+        ex:nb_velos_dispos  "5" ;
+        ex:station_id       "40" ;
+        geo:lat             "43.619701" ;
+        geo:lon             "3.883831" .
+
+<http://loc.example.com/data/stations/16%20Antigone%20centre>
+        a                   ex:stations_montpellier ;
+        ex:capacity         "16" ;
+        ex:name             "16 Antigone centre" ;
+        ex:nb_velos_dispos  "2" ;
+        ex:station_id       "16" ;
+        geo:lat             "43.607942" ;
+        geo:lon             "3.890634" .
+
+<http://loc.example.com/data/stations/3%20Esplanade>
+        a                   ex:stations_montpellier ;
+        ex:capacity         "32" ;
+        ex:name             "3 Esplanade" ;
+        ex:nb_velos_dispos  "28" ;
+        ex:station_id       "3" ;
+        geo:lat             "43.609478" ;
+        geo:lon             "3.881293" .
+
+<http://loc.example.com/data/stations/47%20Place%20Viala>
+        a                   ex:stations_montpellier ;
+        ex:capacity         "8" ;
+        ex:name             "47 Place Viala" ;
+        ex:nb_velos_dispos  "2" ;
+        ex:station_id       "47" ;
+        geo:lat             "43.616812" ;
+        geo:lon             "3.855075" .
+
+<http://loc.example.com/data/stations/13%20Emile%20Combes>
+        a                   ex:stations_montpellier ;
+        ex:capacity         "8" ;
+        ex:name             "13 Emile Combes" ;
+        ex:nb_velos_dispos  "4" ;
+        ex:station_id       "13" ;
+        geo:lat             "43.616742" ;
+        geo:lon             "3.879980" .
